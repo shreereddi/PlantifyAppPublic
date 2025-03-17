@@ -1,18 +1,22 @@
-## Getting Started
+## TSA Software Development
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Garden App for software development event. (environmental and agricultural sustainability 
 
-## Folder Structure
+## App Name and Features
 
-The workspace contains two folders by default, where:
+# App Name: Plantify
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- one time login system
+- system to edit profile
+- interactive plant managagement grid
+- plant data of 100 plants with different fields
+- personailized recommendations based on state and planting zone
+- filtered recommendations
+- warnings and real time notifications with tips and tricks on how to handle different plants
+- information on specific plants in your virtual "garden"
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Authors
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Naga Peddi
+Shree Reddi
+Esha Penmatsa
