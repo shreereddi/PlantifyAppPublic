@@ -4,7 +4,7 @@ Garden App for software development event. (environmental and agricultural susta
 
 ## App Name and Features
 
-# App Name: Plantify
+### App Name: Plantify
 
 - one time login system
 - system to edit profile
