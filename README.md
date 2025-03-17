@@ -1,6 +1,6 @@
 ## TSA Software Development
 
-Garden App for software development event. (environmental and agricultural sustainability 
+Garden App for software development event. (environmental and agricultural sustainability)
 
 ## App Name and Features
 
