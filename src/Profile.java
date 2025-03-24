@@ -9,10 +9,10 @@ public class Profile {
     String name;
     String location;
     //variable declarations for all the variables used in the main App Screen
-    JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel;
+    JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel;
     JScrollPane scrollPane;
     GridBagConstraints constraints;
-    JButton profile_btn, addRowbtn, addColbtn, getRecBtn, recPanelBackBtn, recPanelGoBtn, recPanelResetBtn;
+    JButton profile_btn, addRowbtn, addColbtn, getRecBtn, recPanelBackBtn, recPanelGoBtn, recPanelResetBtn, toggleDrawerButton;
     JLabel description, loclbl, gardenTitle, titlelbl, recPanelTitle, recPanelState, recPanelTypeLabel, recPanelOutputLabel;
     //String[] months = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     String[] types = {"", "Vegetable", "Flower", "Fruit", "Herb", "Tree"};
@@ -21,6 +21,11 @@ public class Profile {
 
     CardLayout profileCL;
     JPanel cp;
+
+    private boolean isDrawerOpen = false;
+    private final int drawerWidth = 200;
+    private Timer slideTimer;
+    private int drawerX = -drawerWidth; 
 
     String statesFile = "data\\States.csv";
     String plantFile = "data\\PlantData.csv";
@@ -104,6 +109,7 @@ public class Profile {
         profileCL.show(cp, "Profile Panel");
         mainPanel.add(cp);
         f.add(mainPanel);
+        
     }
     //createPanel  helps us add all of the infromation on one screen, without having multiple frames open. 
     //We used ChatGPT for help on figuring out what createPanel is, but we used documentation for the code.
@@ -125,6 +131,8 @@ public class Profile {
         notificationsPanel.add(notPanelTitle);
        // profilePanel.add(scrollPane);
         profilePanel.add(notificationsPanel);
+
+        initNavigationDrawer();
 
 
         // format edit profile panel
@@ -580,6 +588,46 @@ public class Profile {
             e.printStackTrace();
         }
         return states;
+    }
+
+    private void initNavigationDrawer() {
+        drawerPanel = new JPanel();
+        drawerPanel.setLayout(new BoxLayout(drawerPanel, BoxLayout.Y_AXIS));
+        drawerPanel.setBackground(new Color(189, 195, 155));
+        drawerPanel.setBounds(-drawerWidth, 0, drawerWidth, 700);  // Shifted down
+
+        JButton homeButton = new JButton("Home");
+        JButton profileButton = new JButton("Profile");
+        JButton settingsButton = new JButton("Settings");
+        JButton logoutButton = new JButton("Logout");
+
+        homeButton.addActionListener(e -> showContent("Home"));
+        profileButton.addActionListener(e -> showContent("Profile"));
+        settingsButton.addActionListener(e -> showContent("Settings"));
+        logoutButton.addActionListener(e -> showContent("Logout"));
+
+        drawerPanel.add(Box.createVerticalStrut(20)); // Add spacing at the top
+        drawerPanel.add(homeButton);
+        drawerPanel.add(profileButton);
+        drawerPanel.add(settingsButton);
+        drawerPanel.add(logoutButton);
+
+        toggleDrawerButton = new JButton("☰");
+        toggleDrawerButton.setBounds(10, 10, 50, 30);
+        toggleDrawerButton.addActionListener(e -> toggleDrawer());
+
+        mainPanel.add(toggleDrawerButton);
+        mainPanel.add(drawerPanel);
+    }
+
+    private void toggleDrawer() {
+        drawerX = isDrawerOpen ? -drawerWidth : 0;
+        drawerPanel.setBounds(drawerX, 50, drawerWidth, 600);  // Shifted down
+        isDrawerOpen = !isDrawerOpen;
+    }
+
+    private void showContent(String content) {
+        JOptionPane.showMessageDialog(mainPanel, "You selected: " + content);
     }
 
      // Method to generate a random integer in the range [min, max]
