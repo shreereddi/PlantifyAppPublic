@@ -1,4 +1,8 @@
+
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 
 public class Main{
     public static void main(String[] args) {
@@ -13,7 +17,10 @@ public class Main{
         profileTest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         profileTest.setSize(800,600);
 
-        Profile p = new Profile();
+        CardLayout clay = new CardLayout();
+        JPanel cardpan = new JPanel();
+
+        Profile p = new Profile(clay, cardpan);
         p.createGUI(profileTest, "Naga", "North Carolina");
         profileTest.show(true);
         

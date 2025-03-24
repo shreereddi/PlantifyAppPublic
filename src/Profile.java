@@ -9,7 +9,7 @@ public class Profile {
     String name;
     String location;
     //variable declarations for all the variables used in the main App Screen
-    JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel;
+    JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel, waterTrackerPanel;
     JScrollPane scrollPane;
     GridBagConstraints constraints;
     JButton profile_btn, addRowbtn, addColbtn, getRecBtn, recPanelBackBtn, recPanelGoBtn, recPanelResetBtn, toggleDrawerButton;
@@ -26,6 +26,12 @@ public class Profile {
     private final int drawerWidth = 200;
     private Timer slideTimer;
     private int drawerX = -drawerWidth; 
+
+    JPopupMenu navPopUp;
+    JMenuItem homeButton;
+    JMenuItem profileButton;
+    JMenuItem waterButton;
+    JMenuItem logoutButton;
 
     String statesFile = "data\\States.csv";
     String plantFile = "data\\PlantData.csv";
@@ -65,8 +71,11 @@ public class Profile {
     private static int columnCount = 2;
     private static int count = 0;
 
+    CardLayout loginCardLayout;
+    JPanel loginCardPanel;
+
     //holds all of the code for the profile, the garden, and other features we want to add
-    public Profile(){
+    public Profile(CardLayout c, JPanel cardp){
         mainPanel = new JPanel(null);
         //mainPanel.setBounds(0, 0, 800, 600);
 
@@ -74,6 +83,7 @@ public class Profile {
        // profilePanel.setBounds(0, 0, 800, 600);
         //profilePanel.setBackground(new Color(221, 229, 182));
         editProfilePanel = new JPanel(null);
+        waterTrackerPanel = new JPanel(null);
         notificationsPanel = new JPanel(null);
         scrollPane = new JScrollPane(notificationsPanel);
         
@@ -83,6 +93,9 @@ public class Profile {
 
         profileCL = new CardLayout();
         cp = new JPanel(profileCL);
+
+        loginCardLayout = c;
+        loginCardPanel = cardp;
         //cp.setBounds(0, 0, 800, 600);
         //cp.setLayout(profileCL);
 
@@ -133,6 +146,14 @@ public class Profile {
         profilePanel.add(notificationsPanel);
 
         initNavigationDrawer();
+
+        // waterTrackerPanel code - SHREE
+
+        waterTrackerPanel.setBackground(new Color(221, 229, 182));
+        cp.add(waterTrackerPanel, "Water Tracker");
+
+
+
 
 
         // format edit profile panel
@@ -591,39 +612,75 @@ public class Profile {
     }
 
     private void initNavigationDrawer() {
-        drawerPanel = new JPanel();
-        drawerPanel.setLayout(new BoxLayout(drawerPanel, BoxLayout.Y_AXIS));
-        drawerPanel.setBackground(new Color(189, 195, 155));
-        drawerPanel.setBounds(-drawerWidth, 0, drawerWidth, 700);  // Shifted down
+        //drawerPanel = new JPanel();
+        // drawerPanel.setLayout(new BoxLayout(drawerPanel, BoxLayout.Y_AXIS));
+        // drawerPanel.setBackground(new Color(189, 195, 155));
+        // drawerPanel.setBounds(-drawerWidth, 0, drawerWidth, 700);  // Shifted down
 
-        JButton homeButton = new JButton("Home");
-        JButton profileButton = new JButton("Profile");
-        JButton settingsButton = new JButton("Settings");
-        JButton logoutButton = new JButton("Logout");
-
-        homeButton.addActionListener(e -> showContent("Home"));
-        profileButton.addActionListener(e -> showContent("Profile"));
-        settingsButton.addActionListener(e -> showContent("Settings"));
-        logoutButton.addActionListener(e -> showContent("Logout"));
-
-        drawerPanel.add(Box.createVerticalStrut(20)); // Add spacing at the top
-        drawerPanel.add(homeButton);
-        drawerPanel.add(profileButton);
-        drawerPanel.add(settingsButton);
-        drawerPanel.add(logoutButton);
+        // JButton homeButton = new JButton("Home");
+        // JButton profileButton = new JButton("Profile");
+        // JButton settingsButton = new JButton("Settings");
+        // JButton logoutButton = new JButton("Logout");
 
         toggleDrawerButton = new JButton("☰");
         toggleDrawerButton.setBounds(10, 10, 50, 30);
         toggleDrawerButton.addActionListener(e -> toggleDrawer());
 
+        navPopUp = new JPopupMenu();
+
+        homeButton = new JMenuItem("Home");
+        profileButton = new JMenuItem("Profile");
+        waterButton = new JMenuItem("Water Tracker");
+        logoutButton = new JMenuItem("Logout");
+
+        navPopUp.add(homeButton);
+        navPopUp.add(profileButton);
+        navPopUp.add(waterButton);
+        navPopUp.add(logoutButton);
+
+        //homeButton.addActionListener(e -> showContent("Home"));
+        homeButton.addActionListener((ActionEvent e) -> {
+            profileCL.show(cp, "Profile Panel");
+            toggleDrawerButton.setVisible(true);
+        });
+
+        //profileButton.addActionListener(e -> showContent("Profile"));
+        profileButton.addActionListener((ActionEvent e) -> {
+            profileCL.show(cp, "Edit Profile");
+            toggleDrawerButton.setVisible(true);
+        });
+
+        //settingsButton.addActionListener(e -> showContent("Settings"));
+        waterButton.addActionListener((ActionEvent e) -> {
+            profileCL.show(cp, "Water Tracker");
+            toggleDrawerButton.setVisible(true);
+        });
+
+        //logoutButton.addActionListener(e -> showContent("Logout"));
+        logoutButton.addActionListener((ActionEvent e) -> {
+            loginCardLayout.show(loginCardPanel, "Login");
+        });
+
+        // drawerPanel.add(Box.createVerticalStrut(20)); // Add spacing at the top
+        // drawerPanel.add(homeButton);
+        // drawerPanel.add(profileButton);
+        // drawerPanel.add(waterButton);
+        // drawerPanel.add(logoutButton);
+
+        // toggleDrawerButton = new JButton("☰");
+        // toggleDrawerButton.setBounds(10, 10, 50, 30);
+        // toggleDrawerButton.addActionListener(e -> toggleDrawer());
+
         mainPanel.add(toggleDrawerButton);
-        mainPanel.add(drawerPanel);
+       // mainPanel.add(drawerPanel);
     }
 
     private void toggleDrawer() {
-        drawerX = isDrawerOpen ? -drawerWidth : 0;
-        drawerPanel.setBounds(drawerX, 50, drawerWidth, 600);  // Shifted down
-        isDrawerOpen = !isDrawerOpen;
+        // drawerX = isDrawerOpen ? -drawerWidth : 0;
+        // drawerPanel.setBounds(drawerX, 50, drawerWidth, 600);  // Shifted down
+        // isDrawerOpen = !isDrawerOpen;
+
+        navPopUp.show(toggleDrawerButton, 0, 30);
     }
 
     private void showContent(String content) {

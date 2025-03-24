@@ -19,7 +19,7 @@ import javax.swing.*;
 
 public class Plant{
     JButton plantBtn, backBtn;
-    JPanel plantPanel;
+    JPanel plantPanel, notifications;
 
     String spacingWarnText = "";
 
@@ -66,6 +66,7 @@ public class Plant{
         plantBtn = new JButton("Plant " + plantID);
         backBtn = new JButton("Go Back");
         plantPanel = new JPanel(null);
+        notifications = notPanel;
 
         popup = new JPopupMenu();
         editName = new JMenuItem("Edit Name");
@@ -90,9 +91,9 @@ public class Plant{
                 title.setText(name);
                 readAndCheckForPlant();
                 if(!"".equals(spacingWarnText)){
-                    JLabel spacingWarning = new JLabel(spacingWarnText);
-                    spacingWarning.setBounds(10, 15, 400, 100);
-                    notPanel.add(spacingWarning);
+                    createSpacingWarning(name);
+                    notifications.revalidate();
+                    notifications.repaint();
                 }
 
             }
@@ -220,7 +221,7 @@ public class Plant{
 
                     if(Integer.parseInt(pRow[18]) >= 36){
 
-                        spacingWarnText = "<html> Warning! The " + pRow[0] + " plant spreads up to " + pRow[18] + " inches! Space the plant accordingly. </html>";
+                        spacingWarnText = "<html> Warning! The " + pRow[0] + " plant spreads up to " + pRow[18] + " inches! </html>";
                         // spacingWarning.setBounds(10, 10, 300, 200);
                         // notPanel.add(spacingWarning);
                     }
@@ -239,6 +240,39 @@ public class Plant{
             e.printStackTrace();
             System.out.println("Error reading plant file: " + e.getMessage());
         }
+    }
+
+    public void createSpacingWarning(String n){
+        JButton spacingWarning = new JButton(spacingWarnText);
+        spacingWarning.setBackground(Color.red);
+
+        JPopupMenu spacingWarnPopup = new JPopupMenu();
+        JMenuItem details = new JMenuItem("View Details");
+        JMenuItem delete = new JMenuItem("Delete");
+
+        spacingWarnPopup.add(details);
+        spacingWarnPopup.add(delete);
+
+        details.addActionListener((ActionEvent event) -> {
+            String spacingMessage = "<html>Plant your " + n + " plant a little apart from other plants, especially other spacious plants.</html>";
+            JOptionPane.showMessageDialog(details, spacingMessage);
+            
+        });
+
+        delete.addActionListener((ActionEvent event) -> {
+            notifications.remove(spacingWarning);
+            notifications.revalidate();
+            notifications.repaint();
+        });
+
+        spacingWarning.addActionListener((ActionEvent e) -> {
+            // Show the popup menu at the button's location
+            spacingWarnPopup.show(spacingWarning, spacingWarning.getWidth()/2, spacingWarning.getHeight()/2);
+        });
+
+        spacingWarning.setBounds(10, 40, 380, 30);
+        notifications.add(spacingWarning);
+        spacingWarning.setVisible(true);
     }
 
     // getters
