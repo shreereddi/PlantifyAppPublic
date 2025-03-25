@@ -13,8 +13,12 @@ Formating tasks:
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
+import java.net.URL;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class Plant{
@@ -42,7 +46,13 @@ public class Plant{
     String seasonText = "";
     String heightText = "";
     String spacingText = "";
-    ImageIcon imagePath;
+    URL imagePathUrl;
+    Image resizedImage;
+    int labelWidth = 250; // Desired width
+    int labelHeight = 150; // Desired height
+    BufferedImage buffImg;
+    ImageIcon imageIcon;
+    JLabel imageLabel;
     JPanel recForPlant;
 
     // private String name, image_url, description;
@@ -108,9 +118,8 @@ public class Plant{
             season.setText(seasonText);
             height.setText(heightText);
             spacing.setText(spacingText);
-            image = new JLabel(imagePath);
-            image.setBounds(50, 200, 200, 150);
-            plantPanel.add(image);
+            imageLabel.setIcon(imageIcon);
+            // image = new JLabel(imagePath);
 
             // pp.revalidate();
             // pp.repaint();
@@ -166,33 +175,36 @@ public class Plant{
         description = new JLabel("Centered Label");
         description.setFont(new Font("Serif", Font.BOLD, 20));
         description.setForeground(Color.white);
-        description.setBounds(170,60, 350, 100);
+        description.setBounds(50,60, 350, 100);
         //description.setHorizontalAlignment(SwingConstants.CENTER);
         //description.setVerticalAlignment(SwingConstants.CENTER);
+        imageLabel = new JLabel("Image");
+        imageLabel.setBounds(400, 110, labelWidth, labelHeight);
 
         season = new JLabel("Season");
         season.setFont(n);
         season.setForeground(Color.white);
 
-        season.setBounds(150 , 130, 500, 100);
+        season.setBounds(50 , 130, 300, 100);
 
         height = new JLabel("Height");
         height.setFont(n);
         height.setForeground(Color.white);
 
-        height.setBounds(150 , 170, 500, 100);
+        height.setBounds(50 , 170, 300, 100);
 
         spacing = new JLabel("Spacing");
         spacing.setFont(n);
         spacing.setForeground(Color.white);
 
-        spacing.setBounds(150 , 210, 500, 100);
+        spacing.setBounds(50 , 210, 300, 100);
 
         recForPlant.add(general);
         recForPlant.add(description);
         recForPlant.add(season);
         recForPlant.add(height);
         recForPlant.add(spacing);
+        recForPlant.add(imageLabel);
 
         plantPanel.add(title);
         plantPanel.add(backBtn);
@@ -211,11 +223,23 @@ public class Plant{
                 if(pRow.length > 1 && pRow[0].equals(name)){
                     descriptionText = "<html>" + pRow[3] + "</html>";
 
-                    seasonText = "- This plant grows well in " + pRow[5] + ".";
-                    heightText = "- Its height ranges from " + pRow[9] + " inches.";
-                    spacingText = "- It takes up about " + pRow[8] + " inches of space.";
+                    seasonText = "<html>- This plant grows well in " + pRow[5] + ".</html>";
+                    heightText = "<html>- Its height ranges from " + pRow[9] + " inches.</html>";
+                    spacingText = "<html>- It takes up about " + pRow[8] + " inches of space.</html>";
 
-                    imagePath = new ImageIcon(pRow[1]);
+                    //imagePath = pRow[1];
+                    // System.out.println("url added: " + imagePath);
+
+                    try {
+                        imagePathUrl = new URL(pRow[1]);
+                        buffImg = ImageIO.read(imagePathUrl);
+                        resizedImage = buffImg.getScaledInstance(labelWidth, labelHeight, Image.SCALE_SMOOTH);
+                        imageIcon = new ImageIcon(resizedImage);
+                        System.out.println("url added: " + imagePathUrl);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        System.out.println("failed to load image.");
+                    }
 
                     System.out.println("Plant found and added");
 
