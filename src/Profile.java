@@ -215,37 +215,6 @@ public class Profile {
 
         // reading and putting right values into the STATE min temp and max temp variables
         readAndAddStateTemp(location);
-        // try {
-        //     stateReader = new BufferedReader(new FileReader(statesFile));
-        //     while((stateLine = stateReader.readLine()) != null){
-                
-        //         String [] stateRow = stateLine.split(",");
-                
-        //         // for(String index : stateRow){
-        //         if (stateRow.length > 1) { // Ensure there are enough columns
-        //             if(stateRow[0].equals(location)){
-        //                 stateMinTemp = Integer.parseInt(stateRow[2]);
-        //                 stateMaxTemp = Integer.parseInt(stateRow[3]);
-        //                 System.out.println("State Min Temp: " + stateMinTemp);
-        //                 System.out.println("State Max Temp: " + stateMaxTemp);
-        //                 break;
-        //             }
-        //         }
-        //         // }
-                
-        //     }
-        //     stateReader.close();
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        //     System.out.println("Error reading State file: " + e.getMessage());
-        // }
-        // finally {
-        //     try {
-        //         stateReader.close();
-        //     } catch (IOException e) {
-        //         e.printStackTrace();
-        //     }
-        // }
 
         // creating recommnedations panel
         recPanel = new JPanel(null);
@@ -672,6 +641,7 @@ public class Profile {
         // toggleDrawerButton.addActionListener(e -> toggleDrawer());
 
         mainPanel.add(toggleDrawerButton);
+        toggleDrawerButton.setVisible(true);
        // mainPanel.add(drawerPanel);
     }
 
