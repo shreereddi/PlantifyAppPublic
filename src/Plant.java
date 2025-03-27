@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.util.List;
 
 public class Plant{
     JButton plantBtn, backBtn;
@@ -35,7 +36,7 @@ public class Plant{
     JMenuItem viewDetails;
     JMenuItem removePlant;
 
-    String plantFile = "data\\PlantData.csv";
+    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
     BufferedReader pReader = null;
     String pLine = "";
     int check = 0;
@@ -55,10 +56,14 @@ public class Plant{
     JLabel imageLabel;
     JPanel recForPlant;
 
+    List<Plant> profileSelectedPlants;
+
     // private String name, image_url, description;
     // private int growth_months;
     // private double min_temp, max_temp, spread, min_precip, max_precip, light;
     // private String[] blooming_months;
+
+    double dailyWaterLiters = 0.0; 
 
     String name;
     final int id;
@@ -68,7 +73,7 @@ public class Plant{
     // JLabel title, image, description, growthMonths, spread, watering, light, germination; 
     // String imageurl;
 
-    public Plant(JPanel pp, JPanel c, JPanel gard, JPanel notPanel, CardLayout cardl, int plantID){
+    public Plant(JPanel pp, JPanel c, JPanel gard, JPanel notPanel, CardLayout cardl, int plantID, List<Plant> selectedPlants){
         id = plantID;
         name = "Plant " + Integer.toString(plantID);
         card = c;
@@ -86,6 +91,7 @@ public class Plant{
         popup.add(editName);
         popup.add(viewDetails);
         popup.add(removePlant);
+        this.profileSelectedPlants = selectedPlants;
 
         plantBtn.addActionListener((ActionEvent e) -> {
             // Show the popup menu at the button's location
@@ -105,6 +111,10 @@ public class Plant{
                     notifications.revalidate();
                     notifications.repaint();
                 }
+                if (!profileSelectedPlants.contains(this)) {
+                    profileSelectedPlants.add(this);
+                }
+                
 
             }
         });
@@ -257,6 +267,16 @@ public class Plant{
                 }
                 
                 check++;
+
+                if (pRow.length > 11 && pRow[11] != null && !pRow[11].isEmpty()) {
+                    try {
+                        dailyWaterLiters = Double.parseDouble(pRow[11]);
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid water value for " + pRow[0]);
+                    }
+                    System.out.println("Set water usage for " + name + ": " + dailyWaterLiters);
+
+                }
                 
             }
             pReader.close();
@@ -303,5 +323,10 @@ public class Plant{
     public JButton getButton(){ return plantBtn; }
 
     public JPanel getPlantPanel(){ return plantPanel; }
+
+    public double getDailyWaterLiters() {
+        return dailyWaterLiters;
+    }
+    
 
 }

@@ -34,7 +34,7 @@ public class Profile {
     JMenuItem logoutButton;
 
     String statesFile = "data\\States.csv";
-    String plantFile = "data\\PlantData.csv";
+    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
     BufferedReader stateReader = null;
     BufferedReader plantReader = null;
     String stateLine = "";
@@ -55,6 +55,8 @@ public class Profile {
     String [] states = new String[50];
     BufferedReader reader = null;
 
+
+
     //edit profile variables
     JLabel editProfileTitle, changeNameLabel, changeStateLabel;
     JTextField changeName;
@@ -63,8 +65,14 @@ public class Profile {
 
     // notification panel variables
     JLabel notPanelTitle;
+    JLabel waterAmount;
+
+    //Water panel
+    JLabel waterTrackerTitle;
 
     public List<String> finalA= new ArrayList<>(); 
+    List<Plant> selectedPlants = new ArrayList<>();
+
 
     //gives the coordinate information of the basic garden grid the user will get
     private static int rowCount = 2;
@@ -148,9 +156,19 @@ public class Profile {
         initNavigationDrawer();
 
         // waterTrackerPanel code - SHREE
-
         waterTrackerPanel.setBackground(new Color(221, 229, 182));
+        waterTrackerTitle = new JLabel("Water Tracker");
+        waterTrackerTitle.setFont(title);
+        waterTrackerTitle.setBounds(250, 50, 250, 40);
+
+        waterAmount = new JLabel();
+        waterAmount.setFont(text);
+        waterAmount.setBounds(250, 150, 400, 40);
+
         cp.add(waterTrackerPanel, "Water Tracker");
+        waterTrackerPanel.add(waterTrackerTitle);
+        waterTrackerPanel.add(waterAmount);
+
 
 
 
@@ -275,6 +293,13 @@ public class Profile {
             recPanelOutputLabel.setVisible(true);
             plantOutputPanel.setVisible(true);
         });
+
+        waterButton.addActionListener((ActionEvent e) -> {
+            waterTracker();
+            profileCL.show(cp, "Water Tracker");
+            toggleDrawerButton.setVisible(true);
+        });
+        
 
         recPanelOutputLabel = new JLabel("<html>Here are some plants that grow well in your area: </html>");
         recPanelOutputLabel.setBounds(10, 185, 200, 45);
@@ -403,7 +428,7 @@ public class Profile {
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
                 //JButton p = new JButton("Plant");
-                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count);
+                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants);
                 pl.createPlantPanel(profilePanel);
                 cp.add(pl.getPlantPanel(), "Plant " + Integer.toString(count));
                 constraints.gridx = j;
@@ -426,7 +451,7 @@ public class Profile {
         addRowbtn.addActionListener((ActionEvent e) -> {
             for (int i = 0; i < columnCount; i++){
                 //JButton p = new JButton("Plant");
-                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count);
+                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants);
                 pl.createPlantPanel(profilePanel);
                 cp.add(pl.getPlantPanel(), "Plant " + Integer.toString(count));
                 constraints.gridx = i;
@@ -446,7 +471,7 @@ public class Profile {
         addColbtn.addActionListener((ActionEvent e) -> {
             for (int i = 0; i < rowCount; i++){
                 //JButton p = new JButton("Plant");
-                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count);
+                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants);
                 pl.createPlantPanel(profilePanel);
                 cp.add(pl.getPlantPanel(), "Plant " + Integer.toString(count));
                 constraints.gridx = columnCount;
@@ -465,6 +490,14 @@ public class Profile {
         //profilePanel.setVisible(true);
 
 
+    }
+
+    public void waterTracker() {
+        double total = 0;
+        for (Plant p : selectedPlants) {
+            total += p.getDailyWaterLiters();
+        }
+        waterAmount.setText("Your Garden Needs: " + total + " L/day");
     }
 
     public void createRecPanel(){

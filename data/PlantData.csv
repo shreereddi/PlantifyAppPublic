@@ -1,98 +1,96 @@
 Plant Name,Image url,Image,Special Description,Life Cycle,Season,Min Temp,Max Temp,Spread (in),Height (in),Blooming Months,Water,Sun,Type,Days to Germinate,Planting Zone Min,Planting Zone Max,Min Spread (in),Max Spread (in)
-Lettuce,,,Cool-season leafy green,Annual,Spring/ Fall,35,85,6-12 inches,6-12,N/A (Leafy Green),Moderate,Full-Part,Vegetable,7-10,4,9,6,12
-Red Capsicum,,,Sweet bell pepper variety,Annual,Summer,50,95,18-24 inches,18-36,June-September,Moderate,Full,Vegetable,7-14,9,11,18,24
-Radish,https://gardenerspath.com/wp-content/uploads/2023/05/How-to-Grow-Radishes-Feature.jpg,,Fast-growing root crop,Annual,Spring/ Fall,40,85,6-12 inches,6-12,N/A (Root Vegetable),Moderate,Full,Vegetable,4-7,2,10,6,12
-Green Bean,,,High-yielding legume,Annual,Summer,50,90,18-36 inches,12-24,June-August,Moderate,Full,Vegetable,7-10,3,10,18,36
-Tomato,,,Popular garden fruit,Annual,Summer,50,95,18-36 inches,36-72,June-August,High,Full,Vegetable,5-10,3,11,18,36
-Beet,,,Root vegetable rich in iron,Biennial,Spring/ Fall,40,85,6-12 inches,12-24,N/A (Root Vegetable),Moderate,Full,Vegetable,5-8,2,10,6,12
-Carrot,https://images.rawpixel.com/image_png_400/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjY4NS0zOC1wLnBuZw.png,,Sweet root crop,Biennial,Spring/ Fall,40,85,3-6 inches,6-12,N/A (Root Vegetable),Moderate,Full,Vegetable,7-14,3,10,3,6
-Marigold,,,Pest-repellent flower,Annual,Summer,50,100,12-18 inches,12-36,June-September,Moderate,Full,Flower,4-7,2,11,12,18
-Hosta,,,Shade-loving foliage plant,Perennial,Spring,30,90,24-36 inches,12-36,June-August,Moderate,Part-Shade,Flower,14-21,3,9,24,36
-Kale,,,Hardy leafy green,Biennial,Spring/ Fall,20,85,12-18 inches,12-24,June-August,Moderate,Full,Vegetable,7-10,2,10,12,18
-Lavender,,,Aromatic herb,Perennial,Summer,30,100,18-24 inches,18-36,April-June,Low,Full,Herb,14-28,5,9,18,24
-Pea,,,Cool-season climbing legume,Annual,Spring,40,85,12-18 inches,24-36,June-October,Moderate,Full,Vegetable,7-14,3,10,12,18
-Petunia,https://openclipart.org/download/231735/flowe_23.svg,,Colorful ornamental flower,Annual,Summer,50,95,12-18 inches,12-18,May-June,Moderate,Full,Flower,7-10,10,11,12,18
-Rose,,,Classic fragrant flower,Perennial,Spring/ Summer,20,100,18-36 inches,24-72,N/A (Leafy Green),Moderate,Full-Part,Flower,14-21,4,9,18,36
-Spinach,,,Cold-hardy leafy green,Annual,Spring/ Fall,20,75,8-12 inches,6-12,June-September,Moderate,Full-Part,Vegetable,6-10,3,10,8,12
-Zucchini,,,High-yielding summer squash,Annual,Summer,50,95,36-48 inches,24-36,June-September,High,Full,Vegetable,7-14,3,10,36,48
-Basil,,,Aromatic culinary herb,Annual,Summer,50,95,12-18 inches,12-24,June-August,Moderate,Full,Herb,5-10,10,11,12,18
-Blueberry,https://images.rawpixel.com/image_800/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL3B4MTE1OTU0OC1pbWFnZS1rd3Z3ODdwZC5qcGc.jpg,,Antioxidant-rich fruit,Perennial,Spring,-20,85,18-24 inches,48-72,June-September,High,Full-Part,Fruit,14-30,3,8,18,24
-Cucumber,,,Vining or bushy fruit,Annual,Summer,50,95,36-72 inches,12-48,N/A (Bulb Vegetable),High,Full,Vegetable,7-10,3,10,36,72
-Garlic,,,Hardy bulb crop,Annual,Fall,30,85,6-8 inches,12-18,N/A (Root Vegetable),Low,Full,Vegetable,7-14,3,9,6,8
-Potato,,,Staple tuber crop,Annual,Spring/ Fall,40,85,18-24 inches,12-24,June-September,Moderate,Full,Vegetable,7-14,3,10,18,24
-Pepper,,,Sweet or spicy fruit,Annual,Summer,50,95,18-24 inches,18-36,April-June,Moderate,Full,Vegetable,7-14,9,11,18,24
-Strawberry,https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvam9iNjc4LTA3Ni1sMTJ1ZTVxeC5qcGc.jpg,,Perennial/ produces sweet fruits/ needs well-drained soil,Perennial,Spring/Summer,20,85,12-18 inches,6-12,April-June,Medium,Full Sun,Fruit,7-21,3,10,12,18
-Artichoke,,,Hardy perennial/ edible flower buds/ drought-tolerant,Perennial,Spring/Summer,20,90,36-48 inches,36-48,Spring-Summer,Medium,Full Sun,Vegetable,7-14,7,10,36,48
-Broccoli,,,Cool-season crop/ prefers fertile/ well-drained soil,Annual,Spring/Fall,40,80,12-18 inches,24-36,June-August,High,Full Sun,Vegetable,7-14,3,10,12,18
-Cabage,,,Hardy vegetable/ forms tight heads of leaves,Annual,Spring/Fall,40,75,12-18 inches,12-24,June-August,Medium,Full Sun,Vegetable,7-14,3,10,12,18
-Cauliflower,,,Hardy vegetable/ grows in cool weather/ compact heads,Annual,Spring/Fall,45,85,12-18 inches,18-24,June-August,Medium,Full Sun,Vegetable,7-14,3,10,12,18
-Celery,,,Low-growing vegetable/ grows in cool temperatures,Annual,Spring/Fall,45,85,12-18 inches,18-24,June-August,Medium,Full Sun,Vegetable,7-14,6,9,12,18
-Kale,,,Hardy/ cool-season vegetable/ grows best in fertile/ well-drained soil,Annual,Spring/Fall,40,75,12-18 inches,18-36,May-June,Medium,Full Sun,Vegetable,7-14,2,10,12,18
-Leeks,,,Perennial/ cold-hardy vegetable/ grows best in fertile/ well-drained soil,Perennial,Spring/Summer,20,85,6-8 inches,24-36,June-August,Medium,Full Sun,Vegetable,7-21,4,9,6,8
-Watermelon,,,Warm-season fruit/ needs plenty of space to grow,Annual,Summer,55,95,36-72 inches,18-36,July-October,High,Full Sun,Fruit,7-14,4,11,36,72
-Cantaloupe,,,Sweet melon/ requires warm temperatures and space,Annual,Summer,55,95,36-72 inches,18-36,July-October,High,Full Sun,Fruit,7-14,4,11,36,72
-Muskmelon,,,Sweet melon/ grows in warm climates,Annual,Summer,55,95,36-72 inches,18-36,July-October,High,Full Sun,Fruit,7-14,4,11,36,72
-Corn,,,Tall plant/ requires full sun and well-drained soil,Annual,Summer,50,95,12-18 inches,48-96,June-August,High,Full Sun,Grain,7-14,3,11,12,18
-Eggplant,,,Needs full sun/ warm temperatures to thrive,Annual,Summer,50,95,18-24 inches,18-36,June-September,Medium,Full Sun,Fruit,7-14,9,11,18,24
-Okra,,,Heat-loving/ drought-tolerant vegetable,Annual,Summer,55,95,18-24 inches,24-48,July-October,High,Full Sun,Vegetable,7-14,8,11,18,24
-Pumpkin,,,Grows in rich soil/ needs plenty of sun and water,Annual,Summer,55,95,36-72 inches,18-36,July-October,High,Full Sun,Fruit,7-14,3,9,36,72
-Brussels Sprout,,,Cool-season vegetable/ requires well-drained soil,Annual,Fall,40,75,18-24 inches,24-48,August-November,Medium,Full Sun,Vegetable,14-21,3,10,18,24
-Arugula,,,Cool-season/ fast-growing leafy green vegetable,Annual,Spring/Fall,40,75,6-12 inches,6-12,April-June,Medium,Full Sun,Vegetable,7-10,3,10,6,12
-Verbena,,,Aromatic flowering plant/ attracts pollinators,Perennial,Summer,30,95,12-18 inches,18-36,June-August,Medium,Full Sun,Flower,7-14,7,11,12,18
-Peony,,,Hardy perennial with fragrant flowers,Perennial,Spring,30,85,18-36 inches,18-24,May-June,Medium,Full Sun,Flower,7-21,3,8,18,36
-Dahlia,,,Large flowers/ need plenty of sun and well-drained soil,Perennial,Summer,40,95,18-24 inches,24-36,June-September,Medium,Full Sun,Flower,7-14,8,11,18,24
-Sunflower,,,Tall plant/ needs full sun and warm soil,Annual,Summer,50,95,18-24 inches,48-96,June-August,High,Full Sun,Flower,7-10,2,11,18,24
-Zinnia,,,Brightly colored flowers/ attracts pollinators,Annual,Summer,50,90,12-18 inches,12-36,June-October,Medium,Full Sun,Flower,7-10,2,11,12,18
-Coneflower,,,Hardy/ drought-tolerant plant/ blooms in summer,Perennial,Summer,20,95,18-24 inches,24-36,June-August,Low,Full Sun,Flower,7-14,3,9,18,24
-Calla Lily,,,Easy to grow/ fragrant/ blooms in early spring,Perennial,Spring,20,85,12-18 inches,12-24,March-May,Low,Full Sun,Flower,7-14,8,11,12,18
-Lilac,,,Hardy perennial/ fragrant flowers,Perennial,Spring,30,85,36-48 inches,24-36,May-June,Medium,Full Sun,Flower,7-14,3,9,36,48
-Jasmine,,,Fast-growing perennial/ fragrant flowers,Perennial,Spring,20,95,36-48 inches,36-72,May-June,Medium,Full Sun,Flower,7-14,7,10,36,48
-Honeysuckle,,,Woody vine/ attracts pollinators/ fragrant blooms,Perennial,Spring/Summer,30,95,36-48 inches,72-120,March-May,Medium,Full Sun,Vine,7-21,4,10,36,48
-Wisteria,,,Perennial lily/ large fragrant flowers,Perennial,Summer,30,95,48-72 inches,24-48,June-August,Medium,Full Sun,Flower,7-14,4,9,48,72
-Stargazer Lily,,,Hardy perennial/ grows in well-drained soil,Perennial,Spring,20,85,12-18 inches,18-24,April-May,Medium,Full Sun,Flower,7-21,4,9,12,18
-Daffodil,,,Hardy perennial/ grows best in well-drained soil,Perennial,Spring/Summer,30,85,6-12 inches,18-24,March-May,Medium,Full Sun,Flower,7-21,3,8,6,12
-Iris,,,Colorful flowers/ needs plenty of sun and water,Annual,Spring/Summer,50,90,12-18 inches,12-36,June-September,Medium,Full Sun,Flower,7-14,3,9,12,18
-Marigold,,,Hardy/ low-growing shrub/ edible fruit,Perennial,Summer/Fall,30,85,12-18 inches,24-36,June-August,Medium,Full Sun,Fruit,10-21,2,11,12,18
-Tulip,,,Hardy/ perennial shrub/ edible fruit,Perennial,Summer/Fall,30,85,6-12 inches,24-48,June-August,Medium,Full Sun,Fruit,10-21,3,8,6,12
-Rasberry,,,Cool-season vegetable/ tolerates frost,Perennial,Spring/Fall,30,75,18-24 inches,36-48,March-May,Medium,Full Sun,Fruit,7-14,3,8,18,24
-Blackberry,,,Small/ succulent plant/ grows in warm climates,Perennial,Spring/Summer,20,95,18-24 inches,12-24,Year-round,Low,Full Sun,Fruit,7-14,5,10,18,24
-Squash,,,Cool-season vegetable/ tolerates frost,Perennial,Spring/Fall,30,75,36-72 inches,36-48,March-May,Medium,Full Sun,Vegetable,7-14,3,11,36,72
-Onion,,,Bulb vegetable/ grows best in well-drained soil,Perennial,Spring/Fall,30,75,6-12 inches,12-24,March-May,Medium,Full Sun,Vegetable,7-14,3,9,6,12
-Gooseberry,,,Easy to grow/ succulent/ needs full sun,Perennial,Summer,40,95,18-24 inches,12-24,Year-round,Low,Full Sun,Succulent,7-14,3,8,18,24
-Asparagus,,,Edible shoots/ grows in well-drained soil,Perennial,Spring,30,75,24-36 inches,36-48,March-May,Medium,Full Sun,Vegetable,7-14,3,8,24,36
-Avocado,,,Tropical tree/ needs warm temperatures and sun,Perennial,Summer,40,95,12-24 feet,72-120,May-August,High,Full Sun,Tree,14-21,9,11,12,24
-Banana,,,Tropical tree/ needs warm temperatures and sun,Perennial,Summer,50,95,6-10 feet,120-180,May-August,High,Full Sun,Tree,21-28,9,11,6,10
-Cherry,,,Small tree/ needs warm soil and full sun,Perennial,Spring/Summer,40,95,15-30 feet,48-96,March-May,Medium,Full Sun,Tree,7-14,4,9,15,30
-Chives,,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,12-18 inches,12-24,Year-round,Medium,Full Sun,Herb,7-14,3,9,12,18
-Cilantro,,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,6-12 inches,12-24,Year-round,Medium,Full Sun,Herb,7-14,3,10,6,12
-Mint,,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,24-36 inches,12-24,Year-round,Medium,Full Sun,Herb,7-14,3,11,24,36
-Dill,,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,12-18 inches,12-24,Year-round,Medium,Full Sun,Herb,7-14,3,10,12,18
-Rosemary,,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,85,18-24 inches,24-48,April-May,Low,Full Sun,Herb,7-14,6,11,18,24
-Fig,,,Easy to grow/ succulent/ needs full sun,Perennial,Summer,40,95,15-20 feet,12-24,Year-round,Low,Full Sun,Succulent,7-14,8,10,15,20
-Ginger,,,Tropical plant/ needs warm temperatures and full sun,Perennial,Summer,40,95,12-18 inches,24-36,May-August,High,Full Sun,Herb,7-14,8,11,12,18
-Grape,,,Vining plant/ needs full sun,Perennial,Summer,50,95,6-10 feet,72-96,May-August,High,Full Sun,Fruit,21-28,5,9,6,10
-Kiwi,,,Requires well-drained soil/ needs full sun,Perennial,Spring/Summer,40,95,10-12 feet,72-120,June-August,Medium,Full Sun,Fruit,21-28,5,9,10,15
-Olive,,,Requires well-drained soil and warm temperatures,Perennial,Spring/Summer,40,95,10-15 feet,12-36,June-August,Medium,Full Sun,Tree,7-14,8,10,10,15
-Oregano,,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,95,12-18 inches,24-36,March-May,Medium,Full Sun,Herb,7-14,4,9,12,18
-Thyme,,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,95,12-18 inches,24-36,March-May,Medium,Full Sun,Herb,7-14,4,9,12,18
-Parsley,,,Herbaceous/ edible leaves,Perennial,Spring/Summer,50,85,12-18 inches,12-24,March-May,Medium,Full Sun,Herb,7-10,4,9,12,18
-Persimmon,,,Tall tree/ grows well in warm climates,Perennial,Spring/Summer,40,95,15-30 feet,72-96,April-May,Medium,Full Sun,Tree,21-28,7,10,15,30
-Mango,,,Tropical tree/ needs warm temperatures and sun,Perennial,Summer,50,95,20-30 feet,72-96,May-August,High,Full Sun,Tree,21-28,10,11,20,30
-Orange,,,Small tree/ requires warm temperatures,Perennial,Summer,40,95,10-20 feet,48-96,June-August,High,Full Sun,Tree,21-28,9,11,10,20
-Apple,,,Requires cool climates/ needs full sun,Perennial,Spring/Summer,30,75,10-20 feet,72-96,May-August,Medium,Full Sun,Tree,7-14,3,8,10,20
-Plum,,,Requires cool climates/ needs full sun,Perennial,Spring/Summer,40,85,15-20 feet,72-96,May-August,Medium,Full Sun,Tree,14-21,4,9,15,20
-Peach,,,Small tree/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,90,12-18 feet,48-96,May-August,Medium,Full Sun,Tree,14-21,5,9,12,18
-Pomegranate,,,Small tree/ grows best in warm climates,Perennial,Spring/Summer,40,95,15-20 feet,72-96,June-August,Medium,Full Sun,Tree,7-14,8,10,15,20
-Sage,,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,85,12-18 inches,24-48,April-May,Low,Full Sun,Herb,7-14,4,8,12,18
-Shallot,,,Small/ bulbous vegetable/ needs full sun,Perennial,Spring/Summer,30,75,6-12 inches,12-24,March-May,Medium,Full Sun,Vegetable,7-14,3,9,6,12
-Lemon,,,Citrus fruit tree/ needs warm climates and full sun,Perennial,Summer,40,95,8-12 feet,72-96,Year-round,High,Full Sun,Tree,21-28,9,11,8,12
-Apricot,,,Small tree/ grows best in warm climates,Perennial,Spring/Summer,30,85,12-20 feet,72-96,March-May,Medium,Full Sun,Tree,14-21,5,9,12,20
-Cactus,,,Drought-tolerant/ succulent/ thrives in dry conditions,Perennial,Summer,30,95,6-12 inches,12-48,Year-round,Low,Full Sun,Succulent,7-14,4,11,6,12
-Collard,,,Cool-season leafy green vegetable,Annual,Fall/Winter,30,75,18-24 inches,24-48,October-April,Medium,Full Sun,Vegetable,7-14,7,10,18,24
-Catnip,,,Aromatic herb/ attracts cats,Perennial,Spring/Summer,40,85,18-24 inches,12-36,April-July,Medium,Full Sun,Herb,7-14,3,9,18,24
-Pear,,,Fruit-bearing tree/ requires full sun,Perennial,Spring/Summer,30,75,15-20 feet,72-96,May-August,Medium,Full Sun,Tree,14-21,4,9,15,20
-Guava,,,Tropical fruit tree/ needs warm temperatures,Perennial,Summer,50,95,10-20 feet,72-96,May-August,High,Full Sun,Tree,21-28,10,11,10,20
-Fennel,,,Aromatic herb/ grows best in well-drained soil,Perennial,Spring/Summer,40,90,12-18 inches,24-48,May-June,Medium,Full Sun,Herb,7-14,4,9,12,18
-Scallion,,,Edible leafy vegetable/ grows quickly,Annual,Spring/Fall,40,75,6-12 inches,12-24,March-May,Medium,Full Sun,Vegetable,7-14,3,9,6,12
-Rhubarb,,,Perennial vegetable/ needs full sun and cold winters,Perennial,Spring/Summer,20,75,24-36 inches,36-48,March-June,Medium,Full Sun,Vegetable,7-14,3,8,24,36
-Sweet Alyssum,,,Low-growing/ fragrant flowers/ attracts pollinators,Annual,Spring/Summer,30,85,6-12 inches,6-12,April-June,Medium,Full Sun,Flower,7-14,9,11,6,12
+Lettuce,https://upload.wikimedia.org/wikipedia/commons/3/3c/Lettuce_%284988502522%29.jpg,,Cool-season leafy green,Annual,Spring/ Fall,35,85,6-12 inches,6-12,N/A (Leafy Green),1.5,Full-Part,Vegetable,7-10,4,9,6,12
+Red Capsicum,https://www.freshaisle.com/cdn/shop/products/fresh-bell-pepper-red-250-350-gm-exotic-vegetables-545_2048x2048.jpg?v=1739195253,,Sweet bell pepper variety,Annual,Summer,50,95,18-24 inches,18-36,June-September,2,Full,Vegetable,7-14,9,11,18,24
+Radish,https://gardenerspath.com/wp-content/uploads/2023/05/How-to-Grow-Radishes-Feature.jpg,,Fast-growing root crop,Annual,Spring/ Fall,40,85,6-12 inches,6-12,N/A (Root Vegetable),1.2,Full,Vegetable,4-7,2,10,6,12
+Green Bean,https://upload.wikimedia.org/wikipedia/commons/1/18/Fresh_Green_Beans_%28Unsplash%29.jpg,,High-yielding legume,Annual,Summer,50,90,18-36 inches,12-24,June-August,1.8,Full,Vegetable,7-10,3,10,18,36
+Tomato,https://images.pexels.com/photos/4022083/pexels-photo-4022083.jpeg,,Popular garden fruit,Annual,Summer,50,95,18-36 inches,36-72,June-August,2.5,Full,Vegetable,5-10,3,11,18,36
+Beet,https://images.squarespace-cdn.com/content/v1/573b1d59b654f91cddb076c2/782f25bf-f535-464d-b2b6-8cb783e97712/Untitled+design.png,,Root vegetable rich in iron,Biennial,Spring/ Fall,40,85,6-12 inches,12-24,N/A (Root Vegetable),1.5,Full,Vegetable,5-8,2,10,6,12
+Carrot,https://images.pexels.com/photos/1306559/pexels-photo-1306559.jpeg,,Sweet root crop,Biennial,Spring/ Fall,40,85,3-6 inches,6-12,N/A (Root Vegetable),1.3,Full,Vegetable,7-14,3,10,3,6
+Marigold,https://cdn12.picryl.com/photo/2016/12/31/marigold-orange-flower-nature-landscapes-222096-1024.jpg,,Pest-repellent flower,Annual,Summer,50,100,12-18 inches,12-36,June-September,0.8,Full,Flower,4-7,2,11,12,18
+Hosta,https://cdn12.picryl.com/photo/2016/12/31/hosta-shade-plant-nature-landscapes-616d3f-1024.jpg,,Shade-loving foliage plant,Perennial,Spring,30,90,24-36 inches,12-36,June-August,1.4,Part-Shade,Flower,14-21,3,9,24,36
+Kale,https://freerangestock.com/sample/177972/close-up-of-fresh-green-kale-leaves-representing-healthy-organic-food..jpg,,Hardy leafy green,Biennial,Spring/ Fall,20,85,12-18 inches,12-24,June-August,1.6,Full,Vegetable,7-10,2,10,12,18
+Lavender,https://cdn12.picryl.com/photo/2016/12/31/lavender-lavender-field-lavender-cultivation-ad1a7d-1024.jpg,,Aromatic herb,Perennial,Summer,30,100,18-24 inches,18-36,April-June,0.7,Full,Herb,14-28,5,9,18,24
+Pea,https://cdn12.picryl.com/photo/2016/12/31/pea-peas-vegetables-food-drink-5766fd-1024.jpg,,Cool-season climbing legume,Annual,Spring,40,85,12-18 inches,24-36,June-October,1.2,Full,Vegetable,7-14,3,10,12,18
+Petunia,https://cdn12.picryl.com/photo/2016/12/31/purple-purple-petunia-flower-eaf84e-1024.jpg,,Colorful ornamental flower,Annual,Summer,50,95,12-18 inches,12-18,May-June,1,Full,Flower,7-10,10,11,12,18
+Rose,https://cdn12.picryl.com/photo/2016/12/31/rose-flower-botanical-nature-landscapes-23669a-1024.jpg,,Classic fragrant flower,Perennial,Spring/ Summer,20,100,18-36 inches,24-72,N/A (Leafy Green),2,Full-Part,Flower,14-21,4,9,18,36
+Spinach,https://cdn12.picryl.com/photo/2016/12/31/vegetables-spinach-green-06bab4-1024.jpg,,Cold-hardy leafy green,Annual,Spring/ Fall,20,75,8-12 inches,6-12,June-September,1.4,Full-Part,Vegetable,6-10,3,10,8,12
+Zucchini,https://freerangestock.com/sample/152631/zucchini-vegetables-free-stock-photo.jpg,,High-yielding summer squash,Annual,Summer,50,95,36-48 inches,24-36,June-September,2.3,Full,Vegetable,7-14,3,10,36,48
+Basil,https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHgxNDQ4NDgzLWltYWdlLWt3dnZ0ZTh6LmpwZw.jpg,,Aromatic culinary herb,Annual,Summer,50,95,12-18 inches,12-24,June-August,1,Full,Herb,5-10,10,11,12,18
+Blueberry,https://upload.wikimedia.org/wikipedia/commons/7/7e/Blueberries_on_branch.jpg,,Antioxidant-rich fruit,Perennial,Spring,-20,85,18-24 inches,48-72,June-September,1.8,Full-Part,Fruit,14-30,3,8,18,24
+Cucumber,https://cdn12.picryl.com/photo/2016/12/31/cucumber-slices-green-food-drink-11cd16-1024.jpg,,Vining or bushy fruit,Annual,Summer,50,95,36-72 inches,12-48,N/A (Bulb Vegetable),2.2,Full,Vegetable,7-10,3,10,36,72
+Garlic,https://i2.pickpik.com/photos/620/639/793/garlic-garlic-cloves-vegetables-spices-preview.jpg,,Hardy bulb crop,Annual,Fall,30,85,6-8 inches,12-18,N/A (Root Vegetable),0.9,Full,Vegetable,7-14,3,9,6,8
+Potato,https://cdn12.picryl.com/photo/2016/12/31/potatoes-vegetables-erdfrucht-e47833-1024.jpg,,Staple tuber crop,Annual,Spring/ Fall,40,85,18-24 inches,12-24,June-September,1.7,Full,Vegetable,7-14,3,10,18,24
+Pepper,https://cdn12.picryl.com/photo/2016/12/31/sweet-peppers-paprika-green-f55ee4-1024.jpg,,Sweet or spicy fruit,Annual,Summer,50,95,18-24 inches,18-36,April-June,2,Full,Vegetable,7-14,9,11,18,24
+Strawberry,https://cdn12.picryl.com/photo/2016/12/31/strawberries-strawberry-strawberry-fruit-food-drink-0f3235-1024.jpg,,Perennial/ produces sweet fruits/ needs well-drained soil,Perennial,Spring/Summer,20,85,12-18 inches,6-12,April-June,1.5,Full Sun,Fruit,7-21,3,10,12,18
+Artichoke,https://upload.wikimedia.org/wikipedia/commons/6/6d/Artichoke_J1.jpg,,Hardy perennial/ edible flower buds/ drought-tolerant,Perennial,Spring/Summer,20,90,36-48 inches,36-48,Spring-Summer,2,Full Sun,Vegetable,7-14,7,10,36,48
+Broccoli,https://cdn12.picryl.com/photo/2016/12/31/broccoli-green-seiyu-ltd-16fca9-1024.jpg,,Cool-season crop/ prefers fertile/ well-drained soil,Annual,Spring/Fall,40,80,12-18 inches,24-36,June-August,2.1,Full Sun,Vegetable,7-14,3,10,12,18
+Cabage,https://freerangestock.com/sample/156801/a-cabbage-growing-in-a-field.jpg,,Hardy vegetable/ forms tight heads of leaves,Annual,Spring/Fall,40,75,12-18 inches,12-24,June-August,2,Full Sun,Vegetable,7-14,3,10,12,18
+Cauliflower,https://cdn12.picryl.com/photo/2016/12/31/cauliflower-grow-cultivation-food-drink-cf2445-1024.jpg,,Hardy vegetable/ grows in cool weather/ compact heads,Annual,Spring/Fall,45,85,12-18 inches,18-24,June-August,2.1,Full Sun,Vegetable,7-14,3,10,12,18
+Celery,https://upload.wikimedia.org/wikipedia/commons/7/7d/Green-Leaves-of-Celery_41423-480x360_%284904477507%29.jpg,,Low-growing vegetable/ grows in cool temperatures,Annual,Spring/Fall,45,85,12-18 inches,18-24,June-August,2.4,Full Sun,Vegetable,7-14,6,9,12,18
+Leeks,https://wildhunt.org/wp-content/uploads/2024/03/image-from-rawpixel-id-5922851-jpeg-1170x878.jpg,,Perennial/ cold-hardy vegetable/ grows best in fertile/ well-drained soil,Perennial,Spring/Summer,20,85,6-8 inches,24-36,June-August,1.3,Full Sun,Vegetable,7-21,4,9,6,8
+Watermelon,https://seeds.ca/d/?n=ebulletin%2F2017%2F08%2Fwatermelon.jpg,,Warm-season fruit/ needs plenty of space to grow,Annual,Summer,55,95,36-72 inches,18-36,July-October,2.8,Full Sun,Fruit,7-14,4,11,36,72
+Cantaloupe,https://publicdomainrecipes.org/recipes/spiced-cantaloupe/Spiced%20Cantaloupe_hud60a0a2053ba7fbd4ae4a3d89df6bd4d_134262_350x350_fill_q75_box_smart1.jpg,,Sweet melon/ requires warm temperatures and space,Annual,Summer,55,95,36-72 inches,18-36,July-October,2.7,Full Sun,Fruit,7-14,4,11,36,72
+Muskmelon,https://www.healthifyme.com/blog/wp-content/uploads/2020/04/Muskmelon-cover-1.jpg,,Sweet melon/ grows in warm climates,Annual,Summer,55,95,36-72 inches,18-36,July-October,2.7,Full Sun,Fruit,7-14,4,11,36,72
+Corn,https://upload.wikimedia.org/wikipedia/commons/2/23/Corn_On_The_Cobb_From_The_Garden_%28120857039%29.jpeg,,Tall plant/ requires full sun and well-drained soil,Annual,Summer,50,95,12-18 inches,48-96,June-August,2,Full Sun,Grain,7-14,3,11,12,18
+Eggplant,https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmw0NDE0MTk5MjkxMS1wdWJsaWMtaW1hZ2Uta29ucTY3eWIuanBn.jpg,,Needs full sun/ warm temperatures to thrive,Annual,Summer,50,95,18-24 inches,18-36,June-September,2.1,Full Sun,Fruit,7-14,9,11,18,24
+Okra,https://upload.wikimedia.org/wikipedia/commons/9/95/Hong_Kong_Okra_Aug_25_2012.JPG,,Heat-loving/ drought-tolerant vegetable,Annual,Summer,55,95,18-24 inches,24-48,July-October,1.8,Full Sun,Vegetable,7-14,8,11,18,24
+Pumpkin,https://upload.wikimedia.org/wikipedia/commons/3/38/Sugar_Pumpkins.jpg,,Grows in rich soil/ needs plenty of sun and water,Annual,Summer,55,95,36-72 inches,18-36,July-October,3,Full Sun,Fruit,7-14,3,9,36,72
+Brussels Sprout,https://freerangestock.com/sample/64612/brussel-sprouts.jpg,,Cool-season vegetable/ requires well-drained soil,Annual,Fall,40,75,18-24 inches,24-48,August-November,1.9,Full Sun,Vegetable,14-21,3,10,18,24
+Arugula,https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg3NzgzNTEtaW1hZ2Uta3d5b2htMGMuanBn.jpg,,Cool-season/ fast-growing leafy green vegetable,Annual,Spring/Fall,40,75,6-12 inches,6-12,April-June,1.1,Full Sun,Vegetable,7-10,3,10,6,12
+Verbena,https://upload.wikimedia.org/wikipedia/commons/f/fe/Verbena_californica_%28California_vervain%29_%2828969583753%29.jpg,,Aromatic flowering plant/ attracts pollinators,Perennial,Summer,30,95,12-18 inches,18-36,June-August,1,Full Sun,Flower,7-14,7,11,12,18
+Peony,https://i2.pickpik.com/photos/227/864/894/peony-blossom-bloom-pink-preview.jpg,,Hardy perennial with fragrant flowers,Perennial,Spring,30,85,18-36 inches,18-24,May-June,1.4,Full Sun,Flower,7-21,3,8,18,36
+Dahlia,https://images.pexels.com/photos/35647/pexels-photo.jpg,,Large flowers/ need plenty of sun and well-drained soil,Perennial,Summer,40,95,18-24 inches,24-36,June-September,1.7,Full Sun,Flower,7-14,8,11,18,24
+Sunflower,https://upload.wikimedia.org/wikipedia/commons/4/4e/Flower-Sunflower-2485.jpg,,Tall plant/ needs full sun and warm soil,Annual,Summer,50,95,18-24 inches,48-96,June-August,1.9,Full Sun,Flower,7-10,2,11,18,24
+Zinnia,https://cdn12.picryl.com/photo/2016/12/31/zinnia-zinnia-flower-zinnia-elegans-nature-landscapes-81551a-1024.jpg,,Brightly colored flowers/ attracts pollinators,Annual,Summer,50,90,12-18 inches,12-36,June-October,0.9,Full Sun,Flower,7-10,2,11,12,18
+Coneflower,https://upload.wikimedia.org/wikipedia/commons/8/8a/Echinacea_purpurea_%28purple_coneflower%29_2_%2838566479115%29.jpg,,Hardy/ drought-tolerant plant/ blooms in summer,Perennial,Summer,20,95,18-24 inches,24-36,June-August,1.3,Full Sun,Flower,7-14,3,9,18,24
+Calla Lily,https://upload.wikimedia.org/wikipedia/commons/e/e9/2021-06-18_11_03_55_White_Calla_Lily_flower_along_Farmbell_Court_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg,,Easy to grow/ fragrant/ blooms in early spring,Perennial,Spring,20,85,12-18 inches,12-24,March-May,1.6,Full Sun,Flower,7-14,8,11,12,18
+Lilac,https://upload.wikimedia.org/wikipedia/commons/8/8d/Lilac-flowers1.jpg,,Hardy perennial/ fragrant flowers,Perennial,Spring,30,85,36-48 inches,24-36,May-June,1.5,Full Sun,Flower,7-14,3,9,36,48
+Jasmine,https://cdn12.picryl.com/photo/2016/12/31/jasmine-flower-garden-nature-landscapes-f61c62-1024.jpg,,Fast-growing perennial/ fragrant flowers,Perennial,Spring,20,95,36-48 inches,36-72,May-June,1.5,Full Sun,Flower,7-14,7,10,36,48
+Honeysuckle,https://cdn2.picryl.com/photo/2014/01/01/invasive-japanese-honeysuckle-lonicera-japonica-charles-pinckney-national-historic-b5aad3-640.jpg,,Woody vine/ attracts pollinators/ fragrant blooms,Perennial,Spring/Summer,30,95,36-48 inches,72-120,March-May,1.6,Full Sun,Vine,7-21,4,10,36,48
+Wisteria,https://upload.wikimedia.org/wikipedia/commons/b/b0/Glycine_%28Wisteria%29_%282%29.jpg,,Perennial lily/ large fragrant flowers,Perennial,Summer,30,95,48-72 inches,24-48,June-August,2,Full Sun,Flower,7-14,4,9,48,72
+Stargazer Lily,https://upload.wikimedia.org/wikipedia/commons/2/21/Stargazer_lily.JPG,,Hardy perennial/ grows in well-drained soil,Perennial,Spring,20,85,12-18 inches,18-24,April-May,1.6,Full Sun,Flower,7-21,4,9,12,18
+Daffodil,https://images.pexels.com/photos/17451909/pexels-photo-17451909.jpeg?cs=srgb&dl=pexels-nikiemmert-17451909.jpg&fm=jpg,,Hardy perennial/ grows best in well-drained soil,Perennial,Spring/Summer,30,85,6-12 inches,18-24,March-May,0.8,Full Sun,Flower,7-21,3,8,6,12
+Iris,https://upload.wikimedia.org/wikipedia/commons/9/9e/Iris_sanguinea.JPG,,Colorful flowers/ needs plenty of sun and water,Annual,Spring/Summer,50,90,12-18 inches,12-36,June-September,1,Full Sun,Flower,7-14,3,9,12,18
+Tulip,https://png.pngtree.com/thumb_back/fh260/background/20220319/pngtree-summer-meadow-with-red-tupils-field-verdure-horizontal-photo-image_26403660.jpg,,Hardy/ perennial shrub/ edible fruit,Perennial,Summer/Fall,30,85,6-12 inches,24-48,June-August,0.8,Full Sun,Fruit,10-21,3,8,6,12
+Rasberry,https://cdn12.picryl.com/photo/2016/12/31/raspberries-garden-plant-nature-landscapes-b28891-1024.jpg,,Cool-season vegetable/ tolerates frost,Perennial,Spring/Fall,30,75,18-24 inches,36-48,March-May,1.8,Full Sun,Fruit,7-14,3,8,18,24
+Blackberry,https://www.eachhealthybite.com/wp-content/uploads/2024/05/image-from-rawpixel-id-5926910-original-scaled.jpg,,Small/ succulent plant/ grows in warm climates,Perennial,Spring/Summer,20,95,18-24 inches,12-24,Year-round,1.8,Full Sun,Fruit,7-14,5,10,18,24
+Squash,https://www.thespruceeats.com/thmb/8jDCmspPtFTkWPL2Yr6CEpm6AXQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/zucchini-5e139d4483734a84b5b5e751d90f2d58.jpg,,Cool-season vegetable/ tolerates frost,Perennial,Spring/Fall,30,75,36-72 inches,36-48,March-May,2.3,Full Sun,Vegetable,7-14,3,11,36,72
+Onion,https://www.stockvault.net/data/2016/05/21/199291/preview16.jpg,,Bulb vegetable/ grows best in well-drained soil,Perennial,Spring/Fall,30,75,6-12 inches,12-24,March-May,1.1,Full Sun,Vegetable,7-14,3,9,6,12
+Gooseberry,https://publicdomainrecipes.org/recipes/spiced-gooseberries/Spiced%20Gooseberries_hu9dc309186c5ec45f9545b9dfe0cd00a9_140180_350x350_fill_q75_box_smart1.jpg,,Easy to grow/ succulent/ needs full sun,Perennial,Summer,40,95,18-24 inches,12-24,Year-round,1.6,Full Sun,Succulent,7-14,3,8,18,24
+Asparagus,https://cdn12.picryl.com/photo/2016/12/31/asparagus-green-vegetables-food-drink-25a304-1024.jpg,,Edible shoots/ grows in well-drained soil,Perennial,Spring,30,75,24-36 inches,36-48,March-May,1.2,Full Sun,Vegetable,7-14,3,8,24,36
+Avocado,https://cdn12.picryl.com/photo/2016/12/31/avocado-fruit-food-food-drink-16d35a-1024.jpg,,Tropical tree/ needs warm temperatures and sun,Perennial,Summer,40,95,12-24 feet,72-120,May-August,3,Full Sun,Tree,14-21,9,11,12,24
+Banana,https://cdn12.picryl.com/photo/2016/12/31/banana-yellow-bunch-of-bananas-food-drink-50b697-1024.jpg,,Tropical tree/ needs warm temperatures and sun,Perennial,Summer,50,95,6-10 feet,120-180,May-August,4,Full Sun,Tree,21-28,9,11,6,10
+Cherry,https://oregoncapitalchronicle.com/wp-content/uploads/2024/03/cherries-sweet-Washington-State-Department-of-Agriculture.jpg,,Small tree/ needs warm soil and full sun,Perennial,Spring/Summer,40,95,15-30 feet,48-96,March-May,2.5,Full Sun,Tree,7-14,4,9,15,30
+Chives,https://cdn12.picryl.com/photo/2016/12/31/chives-herbs-culinary-herbs-nature-landscapes-df7c87-1024.jpg,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,12-18 inches,12-24,Year-round,1,Full Sun,Herb,7-14,3,9,12,18
+Cilantro,https://cdn12.picryl.com/photo/2016/12/31/cilantro-herbs-food-food-drink-cc164d-1024.jpg,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,6-12 inches,12-24,Year-round,0.9,Full Sun,Herb,7-14,3,10,6,12
+Mint,https://www.stockvault.net/data/2024/10/02/307959/preview16.jpg,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,24-36 inches,12-24,Year-round,1.2,Full Sun,Herb,7-14,3,11,24,36
+Dill,https://cdn12.picryl.com/photo/2016/12/31/dill-cucumber-herb-herb-648931-1024.jpg,,Herbaceous plant/ fragrant/ edible leaves,Perennial,Spring/Summer,40,90,12-18 inches,12-24,Year-round,1,Full Sun,Herb,7-14,3,10,12,18
+Rosemary,https://upload.wikimedia.org/wikipedia/commons/f/f4/Rosemary-7560.jpg,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,85,18-24 inches,24-48,April-May,0.7,Full Sun,Herb,7-14,6,11,18,24
+Fig,https://freerangestock.com/sample/88552/close-up-of-fresh-figs-on-white-surface.jpg,,Easy to grow/ succulent/ needs full sun,Perennial,Summer,40,95,15-20 feet,12-24,Year-round,2.4,Full Sun,Succulent,7-14,8,10,15,20
+Ginger,https://cdn12.picryl.com/photo/2016/12/31/root-ginger-spice-food-drink-1deff8-1024.jpg,,Tropical plant/ needs warm temperatures and full sun,Perennial,Summer,40,95,12-18 inches,24-36,May-August,1.3,Full Sun,Herb,7-14,8,11,12,18
+Grape,https://upload.wikimedia.org/wikipedia/commons/e/ee/Grape-2.jpg,,Vining plant/ needs full sun,Perennial,Summer,50,95,6-10 feet,72-96,May-August,2.5,Full Sun,Fruit,21-28,5,9,6,10
+Kiwi,https://cdn12.picryl.com/photo/2016/12/31/kiwifruit-fruit-kiwi-food-drink-2430c7-1024.jpg,,Requires well-drained soil/ needs full sun,Perennial,Spring/Summer,40,95,10-12 feet,72-120,June-August,2.3,Full Sun,Fruit,21-28,5,9,10,15
+Olive,https://images.pexels.com/photos/28704676/pexels-photo-28704676.jpeg?cs=srgb&dl=pexels-mahmoud-yahyaoui-28704676.jpg&fm=jpg,,Requires well-drained soil and warm temperatures,Perennial,Spring/Summer,40,95,10-15 feet,12-36,June-August,1.5,Full Sun,Tree,7-14,8,10,10,15
+Oregano,https://upload.wikimedia.org/wikipedia/commons/9/99/Oregano_1.jpg,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,95,12-18 inches,24-36,March-May,0.8,Full Sun,Herb,7-14,4,9,12,18
+Thyme,https://cdn12.picryl.com/photo/2016/12/31/thyme-spice-plant-nature-landscapes-505d0f-1024.jpg,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,95,12-18 inches,24-36,March-May,0.7,Full Sun,Herb,7-14,4,9,12,18
+Parsley,https://cdn12.picryl.com/photo/2016/12/31/thyme-spice-plant-nature-landscapes-505d0f-1024.jpg,,Herbaceous/ edible leaves,Perennial,Spring/Summer,50,85,12-18 inches,12-24,March-May,1.1,Full Sun,Herb,7-10,4,9,12,18
+Persimmon,https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZybmF0dXJlX3BsYW50X2JyYW5jaF9idXNoLWltYWdlLWt5YmF6dGdzLmpwZw.jpg,,Tall tree/ grows well in warm climates,Perennial,Spring/Summer,40,95,15-30 feet,72-96,April-May,2.7,Full Sun,Tree,21-28,7,10,15,30
+Mango,https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJtYW5nb19tYW5naWZlcmFfaW5kaWNhX2Fib3V0XzItaW1hZ2Uta3liZDgxODMuanBn.jpg,,Tropical tree/ needs warm temperatures and sun,Perennial,Summer,50,95,20-30 feet,72-96,May-August,3.5,Full Sun,Tree,21-28,10,11,20,30
+Orange,https://cdn12.picryl.com/photo/2016/12/31/orange-fruit-free-photos-food-drink-dc1fb3-1024.jpg,,Small tree/ requires warm temperatures,Perennial,Summer,40,95,10-20 feet,48-96,June-August,3,Full Sun,Tree,21-28,9,11,10,20
+Apple,https://img.goodfon.com/original/4950x3408/4/48/agriculture-apple-autumn-background-branch-diet-fall-food-fr.jpg,,Requires cool climates/ needs full sun,Perennial,Spring/Summer,30,75,10-20 feet,72-96,May-August,2.8,Full Sun,Tree,7-14,3,8,10,20
+Plum,https://cdn12.picryl.com/photo/2016/12/31/plums-plum-tree-fruit-food-drink-3ff7f0-1024.jpg,,Requires cool climates/ needs full sun,Perennial,Spring/Summer,40,85,15-20 feet,72-96,May-August,2.6,Full Sun,Tree,14-21,4,9,15,20
+Peach,https://blog.sakura.co/wp-content/uploads/2022/03/shutterstock_675217411-1.png,,Small tree/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,90,12-18 feet,48-96,May-August,2.7,Full Sun,Tree,14-21,5,9,12,18
+Pomegranate,https://cdn12.picryl.com/photo/2016/12/31/fruit-pomegranate-red-food-drink-3ea98b-1024.jpg,,Small tree/ grows best in warm climates,Perennial,Spring/Summer,40,95,15-20 feet,72-96,June-August,2.5,Full Sun,Tree,7-14,8,10,15,20
+Sage,https://cdn12.picryl.com/photo/2016/12/31/sage-herbs-green-nature-landscapes-8dd340-1024.jpg,,Herb/ needs full sun and well-drained soil,Perennial,Spring/Summer,40,85,12-18 inches,24-48,April-May,0.9,Full Sun,Herb,7-14,4,8,12,18
+Shallot,https://cdn12.picryl.com/photo/2016/12/31/red-shallots-shallots-shallot-food-drink-48a510-1024.jpg,,Small/ bulbous vegetable/ needs full sun,Perennial,Spring/Summer,30,75,6-12 inches,12-24,March-May,1,Full Sun,Vegetable,7-14,3,9,6,12
+Lemon,https://cdn12.picryl.com/photo/2016/12/31/lemon-limone-lemon-tree-food-drink-8cf33b-1024.jpg,,Citrus fruit tree/ needs warm climates and full sun,Perennial,Summer,40,95,8-12 feet,72-96,Year-round,2.4,Full Sun,Tree,21-28,9,11,8,12
+Apricot,https://www.stockvault.net/data/2016/03/26/190868/preview16.jpg,,Small tree/ grows best in warm climates,Perennial,Spring/Summer,30,85,12-20 feet,72-96,March-May,2.6,Full Sun,Tree,14-21,5,9,12,20
+Cactus,"https://www.picturethisai.com/image-handle/website_cmsname/image/1080/153895910982549546.jpeg?x-oss-process=image/format,webp/resize,s_300&v=1.0",,Drought-tolerant/ succulent/ thrives in dry conditions,Perennial,Summer,30,95,6-12 inches,12-48,Year-round,0.1,Full Sun,Succulent,7-14,4,11,6,12
+Collard,https://upload.wikimedia.org/wikipedia/commons/a/ab/Collards.jpg,,Cool-season leafy green vegetable,Annual,Fall/Winter,30,75,18-24 inches,24-48,October-April,1.4,Full Sun,Vegetable,7-14,7,10,18,24
+Catnip,https://upload.wikimedia.org/wikipedia/commons/c/c0/Catnip_%2851596255152%29.jpg,,Aromatic herb/ attracts cats,Perennial,Spring/Summer,40,85,18-24 inches,12-36,April-July,1,Full Sun,Herb,7-14,3,9,18,24
+Pear,https://freerangestock.com/sample/161476/ripe-pears-hanging-on-a-tree-branch.jpg,,Fruit-bearing tree/ requires full sun,Perennial,Spring/Summer,30,75,15-20 feet,72-96,May-August,2.5,Full Sun,Tree,14-21,4,9,15,20
+Guava,https://images.pexels.com/photos/2351813/pexels-photo-2351813.jpeg,,Tropical fruit tree/ needs warm temperatures,Perennial,Summer,50,95,10-20 feet,72-96,May-August,2.8,Full Sun,Tree,21-28,10,11,10,20
+Fennel,https://upload.wikimedia.org/wikipedia/commons/e/e4/Stack_of_fennel.jpg,,Aromatic herb/ grows best in well-drained soil,Perennial,Spring/Summer,40,90,12-18 inches,24-48,May-June,1.3,Full Sun,Herb,7-14,4,9,12,18
+Scallion,https://images.pexels.com/photos/26929379/pexels-photo-26929379.jpeg?cs=srgb&dl=pexels-dilipghosh-26929379.jpg&fm=jpg,,Edible leafy vegetable/ grows quickly,Annual,Spring/Fall,40,75,6-12 inches,12-24,March-May,1.1,Full Sun,Vegetable,7-14,3,9,6,12
+Rhubarb,https://cdn12.picryl.com/photo/2016/12/31/rhubarb-stengel-leaves-food-drink-a13de6-1024.jpg,,Perennial vegetable/ needs full sun and cold winters,Perennial,Spring/Summer,20,75,24-36 inches,36-48,March-June,1.5,Full Sun,Vegetable,7-14,3,8,24,36
+Sweet Alyssum,https://cdn12.picryl.com/photo/2016/12/31/little-dorrit-alyssum-lobularia-maritima-f3988e-1024.jpg,,Low-growing/ fragrant flowers/ attracts pollinators,Annual,Spring/Summer,30,85,6-12 inches,6-12,April-June,0.8,Full Sun,Flower,7-14,9,11,6,12
