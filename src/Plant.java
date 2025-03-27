@@ -140,7 +140,9 @@ public class Plant{
             gard.remove(plantBtn);
             gard.revalidate();
             gard.repaint();
-            
+            // waterTrackp.revalidate();
+            // waterTrackp.repaint();
+
         });
 
         //plant panel init

@@ -9,7 +9,7 @@ public class Profile {
     String name;
     String location;
     //variable declarations for all the variables used in the main App Screen
-    JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel, waterTrackerPanel;
+    JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel, waterTrackerPanel, aboutPanel;
     JScrollPane scrollPane;
     GridBagConstraints constraints;
     JButton profile_btn, addRowbtn, addColbtn, getRecBtn, recPanelBackBtn, recPanelGoBtn, recPanelResetBtn, toggleDrawerButton;
@@ -31,6 +31,7 @@ public class Profile {
     JMenuItem homeButton;
     JMenuItem profileButton;
     JMenuItem waterButton;
+    JMenuItem aboutButton;
     JMenuItem logoutButton;
 
     String statesFile = "data\\States.csv";
@@ -93,6 +94,7 @@ public class Profile {
         editProfilePanel = new JPanel(null);
         waterTrackerPanel = new JPanel(null);
         notificationsPanel = new JPanel(null);
+        aboutPanel = new JPanel(null);
         scrollPane = new JScrollPane(notificationsPanel);
         
         gardenGrid = new JPanel(new GridBagLayout());
@@ -168,6 +170,11 @@ public class Profile {
         waterTrackerPanel.add(waterTrackerTitle);
         waterTrackerPanel.add(waterAmount);
         cp.add(waterTrackerPanel, "Water Tracker");
+
+        //about panel code
+
+        aboutPanel.setBackground(new Color(221, 229, 182));
+        cp.add(aboutPanel, "About Panel");
 
         // format edit profile panel
         editProfilePanel.setBackground(new Color(221, 229, 182));
@@ -628,11 +635,13 @@ public class Profile {
         homeButton = new JMenuItem("Home");
         profileButton = new JMenuItem("Profile");
         waterButton = new JMenuItem("Water Tracker");
+        aboutButton = new JMenuItem("About");
         logoutButton = new JMenuItem("Logout");
 
         navPopUp.add(homeButton);
         navPopUp.add(profileButton);
         navPopUp.add(waterButton);
+        navPopUp.add(aboutButton);
         navPopUp.add(logoutButton);
 
         //homeButton.addActionListener(e -> showContent("Home"));
@@ -651,6 +660,11 @@ public class Profile {
         waterButton.addActionListener((ActionEvent e) -> {
             waterTracker();
             profileCL.show(cp, "Water Tracker");
+            toggleDrawerButton.setVisible(true);
+        });
+
+        aboutButton.addActionListener((ActionEvent e) -> {
+            profileCL.show(cp, "About Panel");
             toggleDrawerButton.setVisible(true);
         });
 
