@@ -18,9 +18,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.util.List;
 
 public class Plant{
     JButton plantBtn, backBtn;
@@ -36,7 +36,7 @@ public class Plant{
     JMenuItem viewDetails;
     JMenuItem removePlant;
 
-    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
+    String plantFile = "data\\PlantData.csv";
     BufferedReader pReader = null;
     String pLine = "";
     int check = 0;
@@ -140,6 +140,7 @@ public class Plant{
             gard.remove(plantBtn);
             gard.revalidate();
             gard.repaint();
+            
         });
 
         //plant panel init
@@ -236,7 +237,9 @@ public class Plant{
                     seasonText = "<html>- This plant grows well in " + pRow[5] + ".</html>";
                     heightText = "<html>- Its height ranges from " + pRow[9] + " inches.</html>";
                     spacingText = "<html>- It takes up about " + pRow[8] + " inches of space.</html>";
-
+                    dailyWaterLiters = Double.parseDouble(pRow[11]);
+                    System.out.println("Set water usage for " + name + ": " + dailyWaterLiters);
+                    
                     //imagePath = pRow[1];
                     // System.out.println("url added: " + imagePath);
 
@@ -267,16 +270,6 @@ public class Plant{
                 }
                 
                 check++;
-
-                if (pRow.length > 11 && pRow[11] != null && !pRow[11].isEmpty()) {
-                    try {
-                        dailyWaterLiters = Double.parseDouble(pRow[11]);
-                    } catch (NumberFormatException e) {
-                        System.out.println("Invalid water value for " + pRow[0]);
-                    }
-                    System.out.println("Set water usage for " + name + ": " + dailyWaterLiters);
-
-                }
                 
             }
             pReader.close();

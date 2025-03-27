@@ -34,7 +34,7 @@ public class Profile {
     JMenuItem logoutButton;
 
     String statesFile = "data\\States.csv";
-    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
+    String plantFile = "data\\PlantData.csv";
     BufferedReader stateReader = null;
     BufferedReader plantReader = null;
     String stateLine = "";
@@ -165,14 +165,9 @@ public class Profile {
         waterAmount.setFont(text);
         waterAmount.setBounds(250, 150, 400, 40);
 
-        cp.add(waterTrackerPanel, "Water Tracker");
         waterTrackerPanel.add(waterTrackerTitle);
         waterTrackerPanel.add(waterAmount);
-
-
-
-
-
+        cp.add(waterTrackerPanel, "Water Tracker");
 
         // format edit profile panel
         editProfilePanel.setBackground(new Color(221, 229, 182));
@@ -294,11 +289,11 @@ public class Profile {
             plantOutputPanel.setVisible(true);
         });
 
-        waterButton.addActionListener((ActionEvent e) -> {
-            waterTracker();
-            profileCL.show(cp, "Water Tracker");
-            toggleDrawerButton.setVisible(true);
-        });
+        // waterButton.addActionListener((ActionEvent e) -> {
+        //     waterTracker();
+        //     profileCL.show(cp, "Water Tracker");
+        //     toggleDrawerButton.setVisible(true);
+        // });
         
 
         recPanelOutputLabel = new JLabel("<html>Here are some plants that grow well in your area: </html>");
@@ -654,6 +649,7 @@ public class Profile {
 
         //settingsButton.addActionListener(e -> showContent("Settings"));
         waterButton.addActionListener((ActionEvent e) -> {
+            waterTracker();
             profileCL.show(cp, "Water Tracker");
             toggleDrawerButton.setVisible(true);
         });
@@ -673,6 +669,7 @@ public class Profile {
         // toggleDrawerButton.setBounds(10, 10, 50, 30);
         // toggleDrawerButton.addActionListener(e -> toggleDrawer());
 
+        profilePanel.add(toggleDrawerButton);
         mainPanel.add(toggleDrawerButton);
         toggleDrawerButton.setVisible(true);
        // mainPanel.add(drawerPanel);
