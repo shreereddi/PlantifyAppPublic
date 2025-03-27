@@ -26,6 +26,8 @@ public class Plant{
     JButton plantBtn, backBtn;
     JPanel plantPanel, notifications;
 
+    static int count = 0;
+
     String spacingWarnText = "";
 
     JPanel card;
@@ -73,7 +75,10 @@ public class Plant{
     // JLabel title, image, description, growthMonths, spread, watering, light, germination; 
     // String imageurl;
 
-    public Plant(JPanel pp, JPanel c, JPanel gard, JPanel notPanel, CardLayout cardl, int plantID, List<Plant> selectedPlants){
+   // GridBagConstraints notPanelConst;
+    JScrollPane scrollPane;
+
+    public Plant(JPanel pp, JPanel c, JPanel gard, JPanel notPanel, CardLayout cardl, int plantID, List<Plant> selectedPlants, GridBagConstraints npConst){
         id = plantID;
         name = "Plant " + Integer.toString(plantID);
         card = c;
@@ -83,10 +88,17 @@ public class Plant{
         plantPanel = new JPanel(null);
         notifications = notPanel;
 
+       // scrollPane = new JScrollPane(notifications);
+        //notifications.setPreferredSize(new Dimension(400, 140));
+       // scrollPane.setBounds(50, 50, 300, 200);
+        //pp.add(scrollPane);
+
         popup = new JPopupMenu();
         editName = new JMenuItem("Edit Name");
         viewDetails = new JMenuItem("View Details");
         removePlant = new JMenuItem("Remove Plant");
+
+        //notPanelConst = npConst;
 
         popup.add(editName);
         popup.add(viewDetails);
@@ -107,7 +119,7 @@ public class Plant{
                 title.setText(name);
                 readAndCheckForPlant();
                 if(!"".equals(spacingWarnText)){
-                    createSpacingWarning(name);
+                    createSpacingWarning(name, npConst);
                     notifications.revalidate();
                     notifications.repaint();
                 }
@@ -281,13 +293,13 @@ public class Plant{
         }
     }
 
-    public void createSpacingWarning(String n){
+    public void createSpacingWarning(String n, GridBagConstraints npConstraints){
         JButton spacingWarning = new JButton(spacingWarnText);
         spacingWarning.setBackground(Color.red);
 
         JPopupMenu spacingWarnPopup = new JPopupMenu();
         JMenuItem details = new JMenuItem("View Details");
-        JMenuItem delete = new JMenuItem("Delete");
+        JMenuItem delete = new JMenuItem("Dismiss");
 
         spacingWarnPopup.add(details);
         spacingWarnPopup.add(delete);
@@ -309,8 +321,18 @@ public class Plant{
             spacingWarnPopup.show(spacingWarning, spacingWarning.getWidth()/2, spacingWarning.getHeight()/2);
         });
 
+        npConstraints.insets = new Insets(3,8,3,8);
+        npConstraints.weightx = 1;
+        npConstraints.weighty = 0;
+        npConstraints.gridx = 0;
+        npConstraints.gridy = count;
+        npConstraints.fill = GridBagConstraints.BOTH; // Fill both horizontally and vertically
+        // npConstraints.ipadx = 20; // Padding x
+        // npConstraints.ipady = 40;
+        count++;
+
         spacingWarning.setBounds(10, 40, 380, 30);
-        notifications.add(spacingWarning);
+        notifications.add(spacingWarning, npConstraints);
         spacingWarning.setVisible(true);
     }
 

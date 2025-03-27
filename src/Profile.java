@@ -11,7 +11,7 @@ public class Profile {
     //variable declarations for all the variables used in the main App Screen
     JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel, waterTrackerPanel, aboutPanel;
     JScrollPane scrollPane;
-    GridBagConstraints constraints;
+    GridBagConstraints constraints, notPanelConstraints;
     JButton profile_btn, addRowbtn, addColbtn, getRecBtn, recPanelBackBtn, recPanelGoBtn, recPanelResetBtn, toggleDrawerButton;
     JLabel description, loclbl, gardenTitle, titlelbl, recPanelTitle, recPanelState, recPanelTypeLabel, recPanelOutputLabel;
     //String[] months = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
@@ -93,9 +93,10 @@ public class Profile {
         //profilePanel.setBackground(new Color(221, 229, 182));
         editProfilePanel = new JPanel(null);
         waterTrackerPanel = new JPanel(null);
-        notificationsPanel = new JPanel(null);
+        notificationsPanel = new JPanel(new GridBagLayout());
         aboutPanel = new JPanel(null);
         scrollPane = new JScrollPane(notificationsPanel);
+        notPanelConstraints = new GridBagConstraints();
         
         gardenGrid = new JPanel(new GridBagLayout());
         //gardenGrid.setBounds(50, 225, 500, 300);
@@ -145,13 +146,13 @@ public class Profile {
         Font text = new Font("Times Roman", Font.PLAIN , 15);
 
         // format notifications panel
-        notificationsPanel.setBounds(360, 85, 400, 120);
+        notificationsPanel.setBounds(360, 65, 400, 140);
         notificationsPanel.setBackground(new Color(175, 186, 119));
         notPanelTitle = new JLabel("Notifications");
         notPanelTitle.setFont(heading);
-        notPanelTitle.setBounds(130,5,200,40);
+        notPanelTitle.setBounds(500,25,200,40);
 
-        notificationsPanel.add(notPanelTitle);
+        profilePanel.add(notPanelTitle);
        // profilePanel.add(scrollPane);
         profilePanel.add(notificationsPanel);
 
@@ -344,7 +345,7 @@ public class Profile {
 
         //The next few sections are label and button declarations where we set the bounds and create them.
         titlelbl = new JLabel("Welcome " + name + "!");
-        titlelbl.setBounds(270, 30, 500, 40);
+        titlelbl.setBounds(100, 30, 500, 40);
         titlelbl.setFont(title);
         profilePanel.add(titlelbl);
 
@@ -430,7 +431,7 @@ public class Profile {
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
                 //JButton p = new JButton("Plant");
-                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants);
+                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants, notPanelConstraints);
                 pl.createPlantPanel(profilePanel);
                 cp.add(pl.getPlantPanel(), "Plant " + Integer.toString(count));
                 constraints.gridx = j;
@@ -453,7 +454,7 @@ public class Profile {
         addRowbtn.addActionListener((ActionEvent e) -> {
             for (int i = 0; i < columnCount; i++){
                 //JButton p = new JButton("Plant");
-                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants);
+                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants, notPanelConstraints);
                 pl.createPlantPanel(profilePanel);
                 cp.add(pl.getPlantPanel(), "Plant " + Integer.toString(count));
                 constraints.gridx = i;
@@ -473,7 +474,7 @@ public class Profile {
         addColbtn.addActionListener((ActionEvent e) -> {
             for (int i = 0; i < rowCount; i++){
                 //JButton p = new JButton("Plant");
-                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants);
+                Plant pl = new Plant(profilePanel, cp, gardenGrid, notificationsPanel, profileCL, count, selectedPlants, notPanelConstraints);
                 pl.createPlantPanel(profilePanel);
                 cp.add(pl.getPlantPanel(), "Plant " + Integer.toString(count));
                 constraints.gridx = columnCount;
