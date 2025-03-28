@@ -76,7 +76,7 @@ public class Plant{
     // String imageurl;
 
    // GridBagConstraints notPanelConst;
-    JScrollPane scrollPane;
+    JScrollPane notScrollPane;
 
     public Plant(JPanel pp, JPanel c, JPanel gard, JPanel notPanel, CardLayout cardl, int plantID, List<Plant> selectedPlants, GridBagConstraints npConst){
         id = plantID;
@@ -88,10 +88,12 @@ public class Plant{
         plantPanel = new JPanel(null);
         notifications = notPanel;
 
-       // scrollPane = new JScrollPane(notifications);
-        //notifications.setPreferredSize(new Dimension(400, 140));
-       // scrollPane.setBounds(50, 50, 300, 200);
-        //pp.add(scrollPane);
+        // notScrollPane = new JScrollPane(notifications);
+        // notScrollPane.setBounds(notifications.getX(), notifications.getY(), notifications.getWidth(), notifications.getHeight());
+        // //notifications.setPreferredSize(new Dimension(400, 140));
+        // // scrollPane.setBounds(50, 50, 300, 200);
+        // notScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        // pp.add(notScrollPane);
 
         popup = new JPopupMenu();
         editName = new JMenuItem("Edit Name");
