@@ -2,7 +2,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import javax.swing.*;
 
 public class Profile {
@@ -35,7 +38,7 @@ public class Profile {
     JMenuItem logoutButton;
 
     String statesFile = "data\\States.csv";
-    String plantFile = "data\\PlantData.csv";
+    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
     BufferedReader stateReader = null;
     BufferedReader plantReader = null;
     String stateLine = "";
@@ -58,6 +61,7 @@ public class Profile {
 
 
 
+
     //edit profile variables
     JLabel editProfileTitle, changeNameLabel, changeStateLabel;
     JTextField changeName;
@@ -70,6 +74,8 @@ public class Profile {
 
     //Water panel
     JLabel waterTrackerTitle;
+
+    JLabel aboutPanelTitle, aboutInfo;
 
     public List<String> finalA= new ArrayList<>(); 
     List<Plant> selectedPlants = new ArrayList<>();
@@ -138,16 +144,16 @@ public class Profile {
     //createPanel  helps us add all of the infromation on one screen, without having multiple frames open. 
     //We used ChatGPT for help on figuring out what createPanel is, but we used documentation for the code.
     public void createPanel(){
-        profilePanel.setBackground(new Color(221, 229, 182));
+        profilePanel.setBackground(new Color(204, 227, 194));
         //Creates the different fonts we use throughout the application
-        Font t = new Font("Times Roman", Font.BOLD, 40);
-        Font heading = new Font("Times Roman", Font.BOLD, 20);
-        Font title = new Font("Times Roman", Font.BOLD, 30);
-        Font text = new Font("Times Roman", Font.PLAIN , 15);
+        Font t = new Font("Inter", Font.BOLD, 40);
+        Font heading = new Font("Inter", Font.BOLD, 20);
+        Font title = new Font("Inter", Font.BOLD, 30);
+        Font text = new Font("Inter", Font.PLAIN, 15);
 
         // format notifications panel
         notificationsPanel.setBounds(360, 65, 400, 140);
-        notificationsPanel.setBackground(new Color(175, 186, 119));
+        notificationsPanel.setBackground(new Color(255, 253, 245));
         notPanelTitle = new JLabel("Notifications");
         notPanelTitle.setFont(heading);
         notPanelTitle.setBounds(500,25,200,40);
@@ -159,26 +165,46 @@ public class Profile {
         initNavigationDrawer();
 
         // waterTrackerPanel code - SHREE
-        waterTrackerPanel.setBackground(new Color(221, 229, 182));
+        waterTrackerPanel.setBackground(new Color(204, 227, 194));
         waterTrackerTitle = new JLabel("Water Tracker");
-        waterTrackerTitle.setFont(title);
+        waterTrackerTitle.setFont(new Font("Inter", Font.BOLD, 30));
         waterTrackerTitle.setBounds(250, 50, 250, 40);
 
         waterAmount = new JLabel();
-        waterAmount.setFont(text);
+        waterAmount.setFont(new Font("Inter", Font.BOLD, 20));
         waterAmount.setBounds(250, 150, 400, 40);
 
+
+        /*Map<String, Double> waterMap = buildWaterMap();
+        JPanel chart = waterUsagePie.createPieChart(waterMap);
+        chart.setBounds(25, 100, 640, 400); // Adjust position based on your layout
+        waterTrackerPanel.revalidate();
+        waterTrackerPanel.repaint();
+        waterTrackerPanel.add(chart);*/
         waterTrackerPanel.add(waterTrackerTitle);
         waterTrackerPanel.add(waterAmount);
         cp.add(waterTrackerPanel, "Water Tracker");
 
         //about panel code
+        aboutPanel.setBackground(new Color(204, 227, 194));
+        aboutPanelTitle = new JLabel("About");
+        aboutPanelTitle.setFont(title);
+        aboutPanelTitle.setBounds(250, 50, 250, 40);
+/* 
+        aboutIntro = new JLabel("About");
+        aboutIntro.setFont(heading);
+        aboutIntro.setBounds(250, 150, 400, 40);*/
+        aboutInfo = new JLabel("Plantify is a student created application which focuses on promoting sustainability through home gardens. By creating an easy to use interface, it makes users of all ages and demographics start their own personal garden!");
+        aboutInfo.setBounds(200, 150, 400, 100);
 
-        aboutPanel.setBackground(new Color(221, 229, 182));
+
+        aboutPanel.add(aboutPanelTitle);
+        //aboutPanel.add(aboutIntro);
+        aboutPanel.add(aboutInfo);
         cp.add(aboutPanel, "About Panel");
 
         // format edit profile panel
-        editProfilePanel.setBackground(new Color(221, 229, 182));
+        editProfilePanel.setBackground(new Color(204, 227, 194));
         
         editProfileTitle = new JLabel("Edit Profile");
         editProfileTitle.setBounds(320, 45, 300, 50);
@@ -202,6 +228,7 @@ public class Profile {
 
         editProfileBackBtn = new JButton("Back");
         editProfileBackBtn.setBounds(230,330,200,40);
+        editProfileBackBtn.setBackground(new Color(139, 180, 110));
 
         editProfileBackBtn.addActionListener((ActionEvent e) -> {
             profileCL.show(cp, "Profile Panel");
@@ -240,11 +267,11 @@ public class Profile {
         // creating recommnedations panel
         recPanel = new JPanel(null);
         recPanel.setBounds(555, 0, 300, 600);
-        recPanel.setBackground(new Color(228,222,174));
+        recPanel.setBackground(new Color(246, 215, 122));
 
         plantOutputPanel = new JPanel(null);
         plantOutputPanel.setBounds(10,250,200,150);
-        plantOutputPanel.setBackground(new Color(221, 229, 182));
+        plantOutputPanel.setBackground(new Color(204, 227, 194));
 
         recPanelTitle = new JLabel("Recommendations");
         recPanelTitle.setBounds(20, 20, 280, 30);
@@ -375,6 +402,7 @@ public class Profile {
 
         addRowbtn = new JButton("Add Row");
         addRowbtn.setBounds(575, 225, 150, 40);
+        addRowbtn.setBackground(new Color(139, 180, 110));
         addRowbtn.setFont(text);
         profilePanel.add(addRowbtn);
 
@@ -422,7 +450,7 @@ public class Profile {
         });
 
         constraints.insets = new Insets(2, 2, 2, 2);
-        gardenGrid.setBackground(new Color(108, 88, 76));
+        gardenGrid.setBackground(new Color(107, 79, 59));
 
         //The next few blocks of code is the creation of the Garden Grid. We used the GridBagLayout
        
@@ -495,12 +523,30 @@ public class Profile {
 
     }
 
+    //HEREEEEEEE
+ 
+    public Map<String, Double> buildWaterMap(){
+        Map<String, Double> waterMap = new HashMap<>();
+        for (Plant p: selectedPlants){
+            String plantName = p.getButton().getText();
+            double waterAmt = p.getDailyWaterLiters();
+            waterMap.put(plantName, waterAmt);
+            System.out.println(waterAmt);
+        }
+
+        return waterMap;
+        
+    }
+
     public void waterTracker() {
         double total = 0;
         for (Plant p : selectedPlants) {
+            //double waterTest = p.getDailyWaterLiters();
             total += p.getDailyWaterLiters();
+            //System.out.println(waterTest);
         }
         waterAmount.setText("Your Garden Needs: " + total + " L/day");
+        System.out.println("Your Garden Needs: " + total + " L/day");
     }
 
     public void createRecPanel(){
@@ -659,9 +705,32 @@ public class Profile {
 
         //settingsButton.addActionListener(e -> showContent("Settings"));
         waterButton.addActionListener((ActionEvent e) -> {
+            waterTrackerPanel.removeAll();
+
+            waterTrackerPanel.setBackground(new Color(204, 227, 194));
+            waterTrackerTitle = new JLabel("Water Tracker");
+            waterTrackerTitle.setFont(new Font("Inter", Font.BOLD, 30));
+            waterTrackerTitle.setBounds(250, 50, 250, 40);
+    
+            waterAmount = new JLabel();
+            waterAmount.setFont(new Font("Inter", Font.BOLD, 20));
+            waterAmount.setBounds(200, 0, 400, 400);
+    
+    
+            Map<String, Double> waterMap = buildWaterMap();
+            JPanel chart = waterUsagePie.createPieChart(waterMap);
+            chart.setBounds(150, 275, 427, 267); // Adjust position based on your layout
+            waterTrackerPanel.revalidate();
+            waterTrackerPanel.repaint();
+            waterTrackerPanel.add(chart);
+            waterTrackerPanel.add(waterTrackerTitle);
+            waterTrackerPanel.add(waterAmount);
+
             waterTracker();
             profileCL.show(cp, "Water Tracker");
             toggleDrawerButton.setVisible(true);
+
+
         });
 
         aboutButton.addActionListener((ActionEvent e) -> {

@@ -2,6 +2,8 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "/Users/shreelakshyareddi/Downloads/jfreechart-1.0.19/lib/jfreechart-1.0.19.jar",
+        "/Users/shreelakshyareddi/Downloads/jfreechart-1.0.19/lib/jcommon-1.0.23.jar"
     ]
 }
