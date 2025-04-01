@@ -9,7 +9,7 @@ import javax.swing.*;
 
 public class Profile {
     String name;
-    String location;
+    //String location;
     //variable declarations for all the variables used in the main App Screen
     JPanel mainPanel, profilePanel, gardenGrid, recPanel, plantOutputPanel, editProfilePanel, notificationsPanel, drawerPanel, waterTrackerPanel, aboutPanel;
     JScrollPane scrollPane;
@@ -38,15 +38,15 @@ public class Profile {
 
     String statesFile = "data\\States.csv";
     String plantFile = "data\\PlantData.csv";
-    BufferedReader stateReader = null;
+    //BufferedReader stateReader = null;
     BufferedReader plantReader = null;
-    String stateLine = "";
+    //String stateLine = "";
     String plantLine = "";
 
-    int stateMinTemp = 0;
-    int stateMaxTemp = 0;
-    int stateZoneMin = 0;
-    int stateZoneMax = 0;
+    // int stateMinTemp = 0;
+    // int stateMaxTemp = 0;
+    // int stateZoneMin = 0;
+    // int stateZoneMax = 0;
     int plantMin = 0;
     int plantMax = 0;
     int plantZoneMin = 0;
@@ -57,9 +57,6 @@ public class Profile {
     String line = "";
     String [] states = new String[50];
     BufferedReader reader = null;
-
-
-
 
     //edit profile variables
     JLabel editProfileTitle, changeNameLabel, changeStateLabel;
@@ -125,14 +122,15 @@ public class Profile {
     }
 
 
-    public void createGUI(JFrame f, String n, String l){
+    public void createGUI(JFrame f, String n){
         mainPanel.setBounds(0, 0, 800, 600);
         
         cp.setBounds(0, 0, 800, 600);
         cp.setLayout(profileCL);
 
         name = n;
-        location = l;
+        //location = l;
+        
         createPanel();
 
         profileCL.show(cp, "Profile Panel");
@@ -299,7 +297,7 @@ public class Profile {
         changeName.setBounds(350, 200, 300, 40);
 
         changeState.setBounds(350, 250, 300, 40);
-        changeState.setSelectedItem(location);
+        changeState.setSelectedItem(State.getStateName());
 
         editProfileBackBtn = new JButton("Back");
         editProfileBackBtn.setBounds(230,330,200,40);
@@ -317,11 +315,12 @@ public class Profile {
             int result = JOptionPane.showConfirmDialog(editProfilePanel, "Proceed with changes?", "Confirm changes?", JOptionPane.OK_CANCEL_OPTION);
             if (result == JOptionPane.OK_OPTION) {
                 name = changeName.getText();
-                location = (String) changeState.getSelectedItem();
+                //location = (String) changeState.getSelectedItem();
+                State.setStateName((String) changeState.getSelectedItem());
                 titlelbl.setText("Welcome " + name + "!");
-                loclbl.setText("State: " + location);
-                recPanelState.setText("State: " + location);
-                readAndAddStateTemp(location);
+                loclbl.setText("State: " + State.getStateName());
+                recPanelState.setText("State: " + State.getStateName());
+                //readAndAddStateTemp(location);
                 profileCL.show(cp, "Profile Panel");
                 //JOptionPane.showMessageDialog(null, "Hello, " + name + "! You live in " + location + ".");
             }
@@ -338,7 +337,7 @@ public class Profile {
         cp.add(editProfilePanel, "Edit Profile");
 
         // reading and putting right values into the STATE min temp and max temp variables
-        readAndAddStateTemp(location);
+        //readAndAddStateTemp(location);
 
         // creating recommnedations panel
         recPanel = new JPanel(null);
@@ -353,7 +352,7 @@ public class Profile {
         recPanelTitle.setBounds(20, 20, 280, 30);
         recPanelTitle.setFont(heading);
 
-        recPanelState = new JLabel("State: " + location);
+        recPanelState = new JLabel("State: " + State.getStateName());
         recPanelState.setBounds(10, 60, 280, 30);
         recPanelState.setFont(text);
 
@@ -470,7 +469,7 @@ public class Profile {
         // namelbl.setFont(text);
         // profilePanel.add(namelbl);
 
-        loclbl = new JLabel("State: " + location);
+        loclbl = new JLabel("State: " + State.getStateName());
         loclbl.setBounds(100, 75, 400, 40);
         loclbl.setFont(text);
         profilePanel.add(loclbl);
@@ -640,36 +639,36 @@ public class Profile {
         return mainPanel;
     }
 
-    public void readAndAddStateTemp(String loc){
-        try {
-            stateReader = new BufferedReader(new FileReader(statesFile));
-            while((stateLine = stateReader.readLine()) != null){
+    // public void readAndAddStateTemp(String loc){
+    //     try {
+    //         stateReader = new BufferedReader(new FileReader(statesFile));
+    //         while((stateLine = stateReader.readLine()) != null){
                 
-                String [] stateRow = stateLine.split(",");
+    //             String [] stateRow = stateLine.split(",");
                 
-                // for(String index : stateRow){
-                if (stateRow.length > 1) { // Ensure there are enough columns
-                    if(stateRow[0].equals(loc)){
-                        stateMinTemp = Integer.parseInt(stateRow[4]);
-                        stateMaxTemp = Integer.parseInt(stateRow[3]);
-                        stateZoneMin = Integer.parseInt(stateRow[1]);
-                        stateZoneMax = Integer.parseInt(stateRow[2]);
-                        System.out.println("State Min Temp: " + stateMinTemp);
-                        System.out.println("State Max Temp: " + stateMaxTemp);
-                        System.out.println("State Min Zone: " + stateZoneMin);
-                        System.out.println("State Max Zone: " + stateZoneMax);
-                        break;
-                    }
-                }
-                // }
+    //             // for(String index : stateRow){
+    //             if (stateRow.length > 1) { // Ensure there are enough columns
+    //                 if(stateRow[0].equals(loc)){
+    //                     stateMinTemp = Integer.parseInt(stateRow[4]);
+    //                     stateMaxTemp = Integer.parseInt(stateRow[3]);
+    //                     stateZoneMin = Integer.parseInt(stateRow[1]);
+    //                     stateZoneMax = Integer.parseInt(stateRow[2]);
+    //                     System.out.println("State Min Temp: " + stateMinTemp);
+    //                     System.out.println("State Max Temp: " + stateMaxTemp);
+    //                     System.out.println("State Min Zone: " + stateZoneMin);
+    //                     System.out.println("State Max Zone: " + stateZoneMax);
+    //                     break;
+    //                 }
+    //             }
+    //             // }
                 
-            }
-            stateReader.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Error reading State file: " + e.getMessage());
-        }
-    }
+    //         }
+    //         stateReader.close();
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //         System.out.println("Error reading State file: " + e.getMessage());
+    //     }
+    // }
 
     public void check(String t){
         int check = 0;
@@ -686,8 +685,8 @@ public class Profile {
                     plantZoneMax = Integer.parseInt(plantRow[16]);
                     plantType = plantRow[13];
 
-                    if(plantMin >= stateMinTemp && plantMax <= stateMaxTemp && plantType.equals(t)){
-                        if(plantZoneMin <= stateZoneMin && plantZoneMax >= stateZoneMax){
+                    if(plantMin >= State.getMinTemp() && plantMax <= State.getMaxTemp() && plantType.equals(t)){
+                        if(plantZoneMin <= State.getMinZone() && plantZoneMax >= State.getMaxZone()){
                             plantRecOutput.add(plantRow[0]);
                             System.out.println("Added plant: " + plantRow[0]);
                         }
@@ -705,8 +704,8 @@ public class Profile {
                     plantZoneMax = Integer.parseInt(plantRow[16]);
                     System.out.println(plantZoneMin + " " + plantZoneMax);
 
-                    if(plantMin >= stateMinTemp && plantMax <= stateMaxTemp){
-                        if(plantZoneMin <= stateZoneMin && plantZoneMax >= stateZoneMax){
+                    if(plantMin >= State.getMinTemp() && plantMax <= State.getMaxTemp()){
+                        if(plantZoneMin <= State.getMinZone() && plantZoneMax >= State.getMaxZone()){
                             plantRecOutput.add(plantRow[0]);
                             System.out.println("Added plant: " + plantRow[0]);
                         }

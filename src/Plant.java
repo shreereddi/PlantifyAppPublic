@@ -29,6 +29,10 @@ public class Plant{
     static int count = 0;
 
     String spacingWarnText = "";
+    String plantingWarnText = "";
+    String plantingMessage = "";
+    boolean isRightTemp = false;
+    boolean isRightZone = false;
 
     JPanel card;
     CardLayout cardlay;
@@ -42,6 +46,11 @@ public class Plant{
     BufferedReader pReader = null;
     String pLine = "";
     int check = 0;
+
+    String plantStateLine = "";
+    String plantStatesFile = "data\\States.csv";
+    BufferedReader plantStateReader = null;
+    int plantMin, plantMax, plantZoneMin, plantZoneMax;
 
     //Plant panel variables
     JLabel description, season, height, spacing, image, general;
@@ -122,6 +131,11 @@ public class Plant{
                 readAndCheckForPlant();
                 if(!"".equals(spacingWarnText)){
                     createSpacingWarning(name, npConst);
+                    notifications.revalidate();
+                    notifications.repaint();
+                }
+                if(!"".equals(plantingWarnText)){
+                    createPlantingWarning(name, npConst);
                     notifications.revalidate();
                     notifications.repaint();
                 }
@@ -255,6 +269,12 @@ public class Plant{
                     spacingText = "<html>- It takes up about " + pRow[8] + " inches of space.</html>";
                     dailyWaterLiters = Double.parseDouble(pRow[11]);
                     System.out.println("Set water usage for " + name + ": " + dailyWaterLiters);
+
+                    plantMin = Integer.parseInt(pRow[6]);
+                    plantMax = Integer.parseInt(pRow[7]);
+                    System.out.println(plantMin + " " + plantMax);
+                    plantZoneMin = Integer.parseInt(pRow[15]);
+                    plantZoneMax = Integer.parseInt(pRow[16]);
                     
                     //imagePath = pRow[1];
                     // System.out.println("url added: " + imagePath);
@@ -279,6 +299,25 @@ public class Plant{
                         // notPanel.add(spacingWarning);
                     }
 
+                    if(plantMin >= State.getMinTemp() && plantMax <= State.getMaxTemp()){
+                        if(plantZoneMin <= State.getMinZone() && plantZoneMax >= State.getMaxZone()){
+                            JOptionPane.showMessageDialog(plantBtn, "Good choice!", "Message", JOptionPane.INFORMATION_MESSAGE);
+                            isRightZone = true;
+                        }
+                        else{
+                            plantingWarnText = "<html> Warning! Are you sure you want to grow " + pRow[0] + " in " + State.getStateName() + "?";
+                        }
+                        isRightTemp = true;
+                    }
+                    else if (plantZoneMin <= State.getMinZone() && plantZoneMax >= State.getMaxZone()){
+                        isRightZone = true;
+                        plantingWarnText = "<html> Warning! Are you sure you want to grow " + pRow[0] + " in " + State.getStateName() + "?";
+
+                    }
+                    else{
+                        plantingWarnText = "<html> Warning! Are you sure you want to grow " + pRow[0] + " in " + State.getStateName() + "?";
+                    }
+
                     break;
                 }
                 else{
@@ -297,7 +336,7 @@ public class Plant{
 
     public void createSpacingWarning(String n, GridBagConstraints npConstraints){
         JButton spacingWarning = new JButton(spacingWarnText);
-        spacingWarning.setBackground(Color.red);
+        spacingWarning.setBackground(Color.orange);
 
         JPopupMenu spacingWarnPopup = new JPopupMenu();
         JMenuItem details = new JMenuItem("View Details");
@@ -336,6 +375,59 @@ public class Plant{
         spacingWarning.setBounds(10, 40, 380, 30);
         notifications.add(spacingWarning, npConstraints);
         spacingWarning.setVisible(true);
+    }
+
+    public void createPlantingWarning(String n, GridBagConstraints npConstraints){
+        JButton plantingWarning = new JButton(plantingWarnText);
+        plantingWarning.setBackground(Color.red);
+
+        JPopupMenu plantingWarnPopup = new JPopupMenu();
+        JMenuItem plantingDetails = new JMenuItem("View Details");
+        JMenuItem plantingDelete = new JMenuItem("Dismiss");
+
+        plantingWarnPopup.add(plantingDetails);
+        plantingWarnPopup.add(plantingDelete);
+
+        plantingDetails.addActionListener((ActionEvent event) -> {
+            if(isRightTemp == true){
+                plantingMessage = "<html>The " + n + " plant does not grow well in your temperature, so it might not be a good idea to plant it.</html>";
+            }
+            else if(isRightZone == true){
+                plantingMessage = "<html>The " + n + " plant does not grow well in your zone, so it might not be a good idea to plant it.</html>";
+            }
+            else{
+                plantingMessage = "<html>The " + n + " plant does not grow well in your temperature or zone, so it might not be a good idea to plant it.</html>";
+            }
+
+            // String plantingMessage = "<html>Plant your " + n + " plant a little apart from other plants, especially other spacious plants.</html>";
+            JOptionPane.showMessageDialog(plantingDetails, plantingMessage);
+            
+        });
+
+        plantingDelete.addActionListener((ActionEvent event) -> {
+            notifications.remove(plantingWarning);
+            notifications.revalidate();
+            notifications.repaint();
+        });
+
+        plantingWarning.addActionListener((ActionEvent e) -> {
+            // Show the popup menu at the button's location
+            plantingWarnPopup.show(plantingWarning, plantingWarning.getWidth()/2, plantingWarning.getHeight()/2);
+        });
+
+        npConstraints.insets = new Insets(3,8,3,8);
+        npConstraints.weightx = 1;
+        npConstraints.weighty = 0;
+        npConstraints.gridx = 0;
+        npConstraints.gridy = count;
+        npConstraints.fill = GridBagConstraints.BOTH; // Fill both horizontally and vertically
+        // npConstraints.ipadx = 20; // Padding x
+        // npConstraints.ipady = 40;
+        count++;
+
+        plantingWarning.setBounds(10, 40, 380, 30);
+        notifications.add(plantingWarning, npConstraints);
+        plantingWarning.setVisible(true);
     }
 
     // getters

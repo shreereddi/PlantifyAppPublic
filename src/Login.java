@@ -303,9 +303,10 @@ public class Login {
             fusername = username.getText();
             if(!"".equals(name.getText()) && !"".equals(email.getText()) && !"".equals(fusername) && !"".equals(fpassword)){
                 profile_name = name.getText();
-                profile_location = (String) location.getSelectedItem();
+                //profile_location = (String) location.getSelectedItem();
+                State.setStateName((String) location.getSelectedItem());
                 Profile p = new Profile(cl, cardPanel);
-                p.createGUI(loginFrame, profile_name, profile_location);
+                p.createGUI(loginFrame, profile_name);
                 cardPanel.add(p.getMainProfilePanel(), "Profile");
                 JOptionPane.showMessageDialog(btn, "You signed up successfully! Now you can login.");
             }

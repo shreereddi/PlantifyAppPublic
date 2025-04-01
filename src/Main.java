@@ -21,7 +21,8 @@ public class Main{
         JPanel cardpan = new JPanel();
 
         Profile p = new Profile(clay, cardpan);
-        p.createGUI(profileTest, "Naga", "North Carolina");
+        State.setStateName("North Carolina");
+        p.createGUI(profileTest, "Naga");
         profileTest.show(true);
         
     }
