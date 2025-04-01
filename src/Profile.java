@@ -188,19 +188,94 @@ public class Profile {
         //about panel code
         aboutPanel.setBackground(new Color(204, 227, 194));
         aboutPanelTitle = new JLabel("About");
-        aboutPanelTitle.setFont(title);
-        aboutPanelTitle.setBounds(250, 50, 250, 40);
-/* 
+        aboutPanelTitle.setFont(new Font("Inter", Font.BOLD, 40));
+
+        aboutPanelTitle.setBounds(330, 30, 250, 40);
+/*  
         aboutIntro = new JLabel("About");
         aboutIntro.setFont(heading);
         aboutIntro.setBounds(250, 150, 400, 40);*/
-        aboutInfo = new JLabel("Plantify is a student created application which focuses on promoting sustainability through home gardens. By creating an easy to use interface, it makes users of all ages and demographics start their own personal garden!");
-        aboutInfo.setBounds(200, 150, 400, 100);
+        
+        //About Page Text 
+        aboutInfo = new JLabel("Plantify is a student created application which focuses on promoting sustainability through home gardens.");
+        aboutInfo.setBounds(50, 130, 700, 100);
+        aboutInfo.setFont(new Font("Inter", Font.BOLD, 13));
+        aboutInfo.setForeground(Color.WHITE);
+        
+        JLabel aboutInfoExt = new JLabel("With its easy to use interface, it helps users of all ages and demographics start their own garden!");
+        aboutInfoExt.setBounds(50, 150, 700, 100);
+        aboutInfoExt.setFont(new Font("Inter", Font.BOLD, 13));
+        aboutInfoExt.setForeground(Color.WHITE);
 
+        JLabel aboutTitle = new JLabel("What is Plantify?");
+        aboutTitle.setBounds(50, 90, 700, 100);
+        aboutTitle.setFont(new Font("Times New Roman", Font.BOLD, 25));
+        aboutTitle.setForeground(Color.WHITE);
+        
+        JLabel missionTitle = new JLabel("Our Mission");
+        missionTitle.setBounds(50, 200, 700, 100);
+        missionTitle.setFont(new Font("Times New Roman", Font.BOLD, 25));
+        missionTitle.setForeground(Color.WHITE);
+
+        JLabel mission = new JLabel("At Plantify, our mission is to empower users to create and maintain personal gardens effortlessly. ");
+        mission.setBounds(50, 230, 700, 100);
+        mission.setFont(new Font("Inter", Font.BOLD, 13));
+        mission.setForeground(Color.WHITE);
+
+        JLabel feature = new JLabel("By encouraging sustainable home gardening, we help users reduce waste and promote eco-friendly habits.");
+        feature.setBounds(50, 250, 700, 100);
+        feature.setFont(new Font("Inter", Font.BOLD, 13));
+        feature.setForeground(Color.WHITE);
+
+        JLabel featuresTitle = new JLabel("Features");
+        featuresTitle.setBounds(50, 300, 700, 100);
+        featuresTitle.setFont(new Font("Times New Roman", Font.BOLD, 25));
+        featuresTitle.setForeground(Color.WHITE);
+
+        JLabel features1 = new JLabel("- Personalized Virtual Garden Creation");
+        features1.setBounds(50, 330, 700, 100);
+        features1.setFont(new Font("Inter", Font.BOLD, 13));
+        features1.setForeground(Color.WHITE);
+
+        JLabel features2 = new JLabel("- Real time notifications");
+        features2.setBounds(50, 350, 700, 100);
+        features2.setFont(new Font("Inter", Font.BOLD, 13));
+        features2.setForeground(Color.WHITE);
+
+        JLabel features3 = new JLabel("- Real time water tracker");
+        features3.setBounds(50, 370, 700, 100);
+        features3.setFont(new Font("Inter", Font.BOLD, 13));
+        features3.setForeground(Color.WHITE);
+
+        JLabel features4 = new JLabel("- Plant recommendations based on your location and climate");
+        features4.setBounds(50, 390, 700, 100);
+        features4.setFont(new Font("Inter", Font.BOLD, 13));
+        features4.setForeground(Color.WHITE);
+       
+
+        //About page background - UI
+        JPanel recForPlant = new JPanel(null);
+        recForPlant.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2, true));
+        //recForPlant.setLayout(new BoxLayout(recForPlant));
+        recForPlant.setBackground(new Color(108, 88, 76));
+        recForPlant.setBounds(30, 100, 730, 400);
+        recForPlant.setLayout(new BoxLayout(recForPlant, BoxLayout.Y_AXIS));
 
         aboutPanel.add(aboutPanelTitle);
-        //aboutPanel.add(aboutIntro);
         aboutPanel.add(aboutInfo);
+        aboutPanel.add(aboutInfoExt);
+        aboutPanel.add(aboutTitle);
+        aboutPanel.add(missionTitle);
+        aboutPanel.add(mission);
+        aboutPanel.add(features1);
+        aboutPanel.add(features2);
+        aboutPanel.add(features3);
+        aboutPanel.add(features4);
+        aboutPanel.add(feature);
+        aboutPanel.add(featuresTitle);
+
+        aboutPanel.add(recForPlant);
+        
         cp.add(aboutPanel, "About Panel");
 
         // format edit profile panel
@@ -690,6 +765,7 @@ public class Profile {
         toggleDrawerButton = new JButton("☰");
         toggleDrawerButton.setBounds(10, 10, 50, 30);
         toggleDrawerButton.addActionListener(e -> toggleDrawer());
+        toggleDrawerButton.setVisible(true);
 
         navPopUp = new JPopupMenu();
 
