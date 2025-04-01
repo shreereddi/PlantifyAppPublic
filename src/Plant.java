@@ -38,7 +38,7 @@ public class Plant{
     JMenuItem viewDetails;
     JMenuItem removePlant;
 
-    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
+    String plantFile = "data\\PlantData.csv";
     BufferedReader pReader = null;
     String pLine = "";
     int check = 0;

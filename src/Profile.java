@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.swing.*;
 
 public class Profile {
@@ -38,7 +37,7 @@ public class Profile {
     JMenuItem logoutButton;
 
     String statesFile = "data\\States.csv";
-    String plantFile = "/Users/shreelakshyareddi/Documents/GitHub/PlantifyApp/data/PlantData.csv";
+    String plantFile = "data\\PlantData.csv";
     BufferedReader stateReader = null;
     BufferedReader plantReader = null;
     String stateLine = "";
@@ -436,6 +435,7 @@ public class Profile {
             addRowbtn.setVisible(false);
             getRecBtn.setVisible(false);
             notificationsPanel.setVisible(false);
+            notPanelTitle.setVisible(false);
         });
 
         recPanelBackBtn.addActionListener((ActionEvent e) -> {
@@ -453,6 +453,7 @@ public class Profile {
             addRowbtn.setVisible(true);
             getRecBtn.setVisible(true);
             notificationsPanel.setVisible(true);
+            notPanelTitle.setVisible(true);
         });
 
         constraints.insets = new Insets(2, 2, 2, 2);
