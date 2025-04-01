@@ -230,7 +230,7 @@ public class Profile {
         featuresTitle.setFont(new Font("Times New Roman", Font.BOLD, 25));
         featuresTitle.setForeground(Color.WHITE);
 
-        JLabel features1 = new JLabel("- Personalized Virtual Garden Creation");
+        JLabel features1 = new JLabel("- Interactive virtual garden creation");
         features1.setBounds(50, 330, 700, 100);
         features1.setFont(new Font("Inter", Font.BOLD, 13));
         features1.setForeground(Color.WHITE);
@@ -245,18 +245,39 @@ public class Profile {
         features3.setFont(new Font("Inter", Font.BOLD, 13));
         features3.setForeground(Color.WHITE);
 
-        JLabel features4 = new JLabel("- Plant recommendations based on your location and climate");
+        JLabel features4 = new JLabel("- Plant recommendations based on your location and planting zone");
         features4.setBounds(50, 390, 700, 100);
         features4.setFont(new Font("Inter", Font.BOLD, 13));
         features4.setForeground(Color.WHITE);
-       
+
+        JLabel features5 = new JLabel("- Plant dataset of 100 plants");
+        features5.setBounds(50, 410, 700, 100);
+        features5.setFont(new Font("Inter", Font.BOLD, 13));
+        features5.setForeground(Color.WHITE);
+
+        JLabel features6 = new JLabel("- Tips, tricks, and information on specific plants");
+        features6.setBounds(50, 430, 700, 100);
+        features6.setFont(new Font("Inter", Font.BOLD, 13));
+        features6.setForeground(Color.WHITE);
+
+        String logoPath = "C:\\Users\\saray\\Downloads\\GardenScapes-Photoroom.png";            
+        // Load the image
+
+        ImageIcon originalIcon = new ImageIcon(logoPath);   
+        Image resizedIcon = originalIcon.getImage().getScaledInstance(400, 400, Image.SCALE_SMOOTH);         
+        // Create a JLabel with the image
+        ImageIcon logoIcon = new ImageIcon(resizedIcon);
+        JLabel logoLabel = new JLabel(logoIcon); 
+        logoLabel.setFont(new Font("Serif", Font.BOLD, 30));
+        logoLabel.setBounds(450, 265, 300, 300);
+        logoLabel.setForeground(new Color(255, 255, 255));
 
         //About page background - UI
         JPanel recForPlant = new JPanel(null);
         recForPlant.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2, true));
         //recForPlant.setLayout(new BoxLayout(recForPlant));
         recForPlant.setBackground(new Color(108, 88, 76));
-        recForPlant.setBounds(30, 100, 730, 400);
+        recForPlant.setBounds(30, 100, 730, 420);
         recForPlant.setLayout(new BoxLayout(recForPlant, BoxLayout.Y_AXIS));
 
         aboutPanel.add(aboutPanelTitle);
@@ -269,8 +290,11 @@ public class Profile {
         aboutPanel.add(features2);
         aboutPanel.add(features3);
         aboutPanel.add(features4);
+        aboutPanel.add(features5);
+        aboutPanel.add(features6);
         aboutPanel.add(feature);
         aboutPanel.add(featuresTitle);
+        aboutPanel.add(logoLabel);
 
         aboutPanel.add(recForPlant);
         
