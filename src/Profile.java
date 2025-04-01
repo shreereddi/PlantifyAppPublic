@@ -575,12 +575,14 @@ public class Profile {
                 // for(String index : stateRow){
                 if (stateRow.length > 1) { // Ensure there are enough columns
                     if(stateRow[0].equals(loc)){
-                        stateMinTemp = Integer.parseInt(stateRow[3]);
-                        stateMaxTemp = Integer.parseInt(stateRow[4]);
+                        stateMinTemp = Integer.parseInt(stateRow[4]);
+                        stateMaxTemp = Integer.parseInt(stateRow[3]);
                         stateZoneMin = Integer.parseInt(stateRow[1]);
                         stateZoneMax = Integer.parseInt(stateRow[2]);
                         System.out.println("State Min Temp: " + stateMinTemp);
                         System.out.println("State Max Temp: " + stateMaxTemp);
+                        System.out.println("State Min Zone: " + stateZoneMin);
+                        System.out.println("State Max Zone: " + stateZoneMax);
                         break;
                     }
                 }
@@ -604,11 +606,12 @@ public class Profile {
                 if(plantRow.length > 1 && check > 1 && !"".equals(t)){ // if there is a type selected
                     plantMin = Integer.parseInt(plantRow[6]);
                     plantMax = Integer.parseInt(plantRow[7]);
+                    System.out.println(plantMin + " " + plantMax);
                     plantZoneMin = Integer.parseInt(plantRow[15]);
                     plantZoneMax = Integer.parseInt(plantRow[16]);
                     plantType = plantRow[13];
 
-                    if(plantMin <= stateMinTemp && plantMax >= stateMaxTemp && plantType.equals(t)){
+                    if(plantMin >= stateMinTemp && plantMax <= stateMaxTemp && plantType.equals(t)){
                         if(plantZoneMin <= stateZoneMin && plantZoneMax >= stateZoneMax){
                             plantRecOutput.add(plantRow[0]);
                             System.out.println("Added plant: " + plantRow[0]);
@@ -622,10 +625,12 @@ public class Profile {
                 else if (plantRow.length > 1 && check > 1) {
                     plantMin = Integer.parseInt(plantRow[6]);
                     plantMax = Integer.parseInt(plantRow[7]);
+                    System.out.println(plantMin + " " + plantMax);
                     plantZoneMin = Integer.parseInt(plantRow[15]);
                     plantZoneMax = Integer.parseInt(plantRow[16]);
+                    System.out.println(plantZoneMin + " " + plantZoneMax);
 
-                    if(plantMin <= stateMinTemp && plantMax >= stateMaxTemp){
+                    if(plantMin >= stateMinTemp && plantMax <= stateMaxTemp){
                         if(plantZoneMin <= stateZoneMin && plantZoneMax >= stateZoneMax){
                             plantRecOutput.add(plantRow[0]);
                             System.out.println("Added plant: " + plantRow[0]);
