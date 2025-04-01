@@ -152,7 +152,8 @@ public class Profile {
 
         // format notifications panel
         notificationsPanel.setBounds(360, 65, 400, 140);
-        notificationsPanel.setBackground(new Color(255, 253, 245));
+        // notificationsPanel.setBackground(new Color(255, 253, 245));
+        notificationsPanel.setBackground(new Color(139, 180, 110));
         notPanelTitle = new JLabel("Notifications");
         notPanelTitle.setFont(heading);
         notPanelTitle.setBounds(500,25,200,40);
@@ -381,6 +382,7 @@ public class Profile {
 
         profile_btn = new JButton("Edit Profile");
         profile_btn.setBounds(100, 125, 200, 40);
+        profile_btn.setBackground(new Color(139, 180, 110));
         profile_btn.setFont(text);
         profilePanel.add(profile_btn);
 
