@@ -788,20 +788,14 @@ public class Profile {
         toggleDrawerButton = new JButton("☰");
         toggleDrawerButton.setBounds(10, 10, 50, 30);
         toggleDrawerButton.addActionListener(e -> toggleDrawer());
-        toggleDrawerButton.setVisible(true);
 
         navPopUp = new JPopupMenu();
 
         homeButton = new JMenuItem("Home");
-        homeButton.setBackground(new Color(139, 180, 110));
         profileButton = new JMenuItem("Profile");
-        profileButton.setBackground(new Color(139, 180, 110));
         waterButton = new JMenuItem("Water Tracker");
-        waterButton.setBackground(new Color(139, 180, 110));
         aboutButton = new JMenuItem("About");
-        aboutButton.setBackground(new Color(139, 180, 110));
         logoutButton = new JMenuItem("Logout");
-        logoutButton.setBackground(new Color(139, 180, 110));
 
         navPopUp.add(homeButton);
         navPopUp.add(profileButton);
@@ -827,22 +821,32 @@ public class Profile {
 
             waterTrackerPanel.setBackground(new Color(204, 227, 194));
             waterTrackerTitle = new JLabel("Water Tracker");
-            waterTrackerTitle.setFont(new Font("SansSerif", Font.BOLD, 30));
+            waterTrackerTitle.setFont(new Font("Inter", Font.BOLD, 30));
             waterTrackerTitle.setBounds(250, 50, 250, 40);
+
+            // code for brown background box UI
+            JPanel recForPlant = new JPanel(null);
+            recForPlant.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2, true));
+            //recForPlant.setLayout(new BoxLayout(recForPlant));
+            recForPlant.setBackground(new Color(108, 88, 76));
+            recForPlant.setBounds(25, 100, 730, 450);
+            recForPlant.setLayout(new BoxLayout(recForPlant, BoxLayout.Y_AXIS));
     
             waterAmount = new JLabel();
-            waterAmount.setFont(new Font("SansSerif", Font.BOLD, 20));
-            waterAmount.setBounds(200, 0, 400, 400);
-    
-    
+            waterAmount.setFont(new Font("Inter", Font.BOLD, 25));
+            waterAmount.setBounds(220, 0, 400, 400);
+            waterAmount.setForeground(Color.WHITE);
+            
             Map<String, Double> waterMap = buildWaterMap();
             JPanel chart = waterUsagePie.createPieChart(waterMap);
-            chart.setBounds(150, 275, 427, 267); // Adjust position based on your layout
+            chart.setBounds(170, 230, 427, 267); // Adjust position based on your layout
             waterTrackerPanel.revalidate();
             waterTrackerPanel.repaint();
             waterTrackerPanel.add(chart);
             waterTrackerPanel.add(waterTrackerTitle);
             waterTrackerPanel.add(waterAmount);
+
+            waterTrackerPanel.add(recForPlant); // adding brown box
 
             waterTracker();
             profileCL.show(cp, "Water Tracker");
