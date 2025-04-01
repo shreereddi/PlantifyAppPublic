@@ -146,10 +146,10 @@ public class Profile {
     public void createPanel(){
         profilePanel.setBackground(new Color(204, 227, 194));
         //Creates the different fonts we use throughout the application
-        Font t = new Font("Inter", Font.BOLD, 40);
-        Font heading = new Font("Inter", Font.BOLD, 20);
-        Font title = new Font("Inter", Font.BOLD, 30);
-        Font text = new Font("Inter", Font.PLAIN, 15);
+        Font t = new Font("SansSerif", Font.BOLD, 40);
+        Font heading = new Font("SansSerif", Font.BOLD, 20);
+        Font title = new Font("SansSerif", Font.BOLD, 30);
+        Font text = new Font("SansSerif", Font.PLAIN, 15);
 
         // format notifications panel
         notificationsPanel.setBounds(360, 65, 400, 140);
@@ -167,11 +167,11 @@ public class Profile {
         // waterTrackerPanel code - SHREE
         waterTrackerPanel.setBackground(new Color(204, 227, 194));
         waterTrackerTitle = new JLabel("Water Tracker");
-        waterTrackerTitle.setFont(new Font("Inter", Font.BOLD, 30));
+        waterTrackerTitle.setFont(new Font("SansSerif", Font.BOLD, 30));
         waterTrackerTitle.setBounds(250, 50, 250, 40);
 
         waterAmount = new JLabel();
-        waterAmount.setFont(new Font("Inter", Font.BOLD, 20));
+        waterAmount.setFont(new Font("SansSerif", Font.BOLD, 20));
         waterAmount.setBounds(250, 150, 400, 40);
 
 
@@ -236,6 +236,7 @@ public class Profile {
 
         saveBtn = new JButton("Save Changes");
         saveBtn.setBounds(440,330,200,40);
+        saveBtn.setBackground(new Color(139, 180, 110));
 
         saveBtn.addActionListener((ActionEvent e) -> {
             int result = JOptionPane.showConfirmDialog(editProfilePanel, "Proceed with changes?", "Confirm changes?", JOptionPane.OK_CANCEL_OPTION);
@@ -290,6 +291,7 @@ public class Profile {
 
         recPanelGoBtn = new JButton("Go");
         recPanelGoBtn.setBounds(75, 135, 100, 40);
+        recPanelGoBtn.setBackground(new Color(139, 180, 110));
         int check = 0;
 
         recPanelGoBtn.addActionListener((ActionEvent e) -> {
@@ -338,9 +340,11 @@ public class Profile {
 
         recPanelBackBtn = new JButton("Go Back");
         recPanelBackBtn.setBounds(40, 500, 150, 40);
+        recPanelBackBtn.setBackground(new Color(139, 180, 110));
 
         recPanelResetBtn = new JButton("Reset");
         recPanelResetBtn.setBounds(50, 425, 130, 40);
+        recPanelResetBtn.setBackground(new Color(139, 180, 110));
 
         recPanelResetBtn.addActionListener((ActionEvent e) -> {
             if(!"".equals((String) recPanelTypeDD.getSelectedItem())){
@@ -408,6 +412,7 @@ public class Profile {
 
         addColbtn = new JButton("Add Column");
         addColbtn.setBounds(575, 275, 150, 40);
+        addColbtn.setBackground(new Color(139, 180, 110));
         addColbtn.setFont(text);
         profilePanel.add(addColbtn);
 
@@ -418,6 +423,7 @@ public class Profile {
 
         getRecBtn = new JButton("<html>Get Your Plant Recommendations</html>");
         getRecBtn.setBounds(575, 440, 160, 80);
+        getRecBtn.setBackground(new Color(139, 180, 110));
         getRecBtn.setFont(text);
         profilePanel.add(getRecBtn);
 
@@ -680,10 +686,15 @@ public class Profile {
         navPopUp = new JPopupMenu();
 
         homeButton = new JMenuItem("Home");
+        homeButton.setBackground(new Color(139, 180, 110));
         profileButton = new JMenuItem("Profile");
+        profileButton.setBackground(new Color(139, 180, 110));
         waterButton = new JMenuItem("Water Tracker");
+        waterButton.setBackground(new Color(139, 180, 110));
         aboutButton = new JMenuItem("About");
+        aboutButton.setBackground(new Color(139, 180, 110));
         logoutButton = new JMenuItem("Logout");
+        logoutButton.setBackground(new Color(139, 180, 110));
 
         navPopUp.add(homeButton);
         navPopUp.add(profileButton);
@@ -709,11 +720,11 @@ public class Profile {
 
             waterTrackerPanel.setBackground(new Color(204, 227, 194));
             waterTrackerTitle = new JLabel("Water Tracker");
-            waterTrackerTitle.setFont(new Font("Inter", Font.BOLD, 30));
+            waterTrackerTitle.setFont(new Font("SansSerif", Font.BOLD, 30));
             waterTrackerTitle.setBounds(250, 50, 250, 40);
     
             waterAmount = new JLabel();
-            waterAmount.setFont(new Font("Inter", Font.BOLD, 20));
+            waterAmount.setFont(new Font("SansSerif", Font.BOLD, 20));
             waterAmount.setBounds(200, 0, 400, 400);
     
     
