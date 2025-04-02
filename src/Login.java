@@ -252,7 +252,7 @@ public class Login {
         label_usern.setFont(new Font("SansSerif", Font.BOLD, 20));
         label_usern.setForeground(Color.WHITE);
 
-        label_email = new JLabel("Email");
+        label_email = new JLabel("Zipcode");
         label_email.setBounds(200, 200, 100, 40);
         email = new JTextField();
         email.setBounds(300, 200, 300, 40);
@@ -305,6 +305,7 @@ public class Login {
                 profile_name = name.getText();
                 //profile_location = (String) location.getSelectedItem();
                 State.setStateName((String) location.getSelectedItem());
+                State.setZipcode(email.getText());
                 Profile p = new Profile(cl, cardPanel);
                 p.createGUI(loginFrame, profile_name);
                 cardPanel.add(p.getMainProfilePanel(), "Profile");
