@@ -111,7 +111,7 @@ public class Login {
         //newOrNot.setBackground(Color.BLUE);
         //The next few lines of code set up labels, text field, and buttons
         title = new JLabel("Welcome! \nAre you new to Plantify?");
-        title.setFont(new Font("Serif", Font.BOLD, 30));
+        title.setFont(new Font("SansSerif", Font.BOLD, 30));
         title.setBounds(155, 90, 600, 40);
         title.setForeground(new Color(255, 255, 255));
 
@@ -256,14 +256,14 @@ public class Login {
         label_email.setBounds(200, 200, 100, 40);
         email = new JTextField();
         email.setBounds(300, 200, 300, 40);
-        label_email.setFont(new Font("SansSerif", Font.BOLD, 25));
+        label_email.setFont(new Font("SansSerif", Font.BOLD, 20));
         label_email.setForeground(Color.WHITE);
 
         label_name = new JLabel("Name");
         label_name.setBounds(200, 150, 100, 40);
         name = new JTextField();
         name.setBounds(300, 150, 300, 40);
-        label_name.setFont(new Font("SansSerif", Font.BOLD, 25));
+        label_name.setFont(new Font("SansSerif", Font.BOLD, 20));
         label_name.setForeground(Color.WHITE);
 
         label_location = new JLabel("Location");

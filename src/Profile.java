@@ -822,7 +822,7 @@ public class Profile {
             waterTrackerPanel.setBackground(new Color(204, 227, 194));
             waterTrackerTitle = new JLabel("Water Tracker");
             waterTrackerTitle.setFont(new Font("Inter", Font.BOLD, 30));
-            waterTrackerTitle.setBounds(250, 50, 250, 40);
+            waterTrackerTitle.setBounds(310, 30, 250, 40);
 
             // code for brown background box UI
             JPanel recForPlant = new JPanel(null);
